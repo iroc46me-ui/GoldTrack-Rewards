@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "GoldTrack Rewards",
   description: "Our Community. Our Initiatives. Our Legacy."
