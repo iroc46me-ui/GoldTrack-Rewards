@@ -1,12 +1,18 @@
 export default function HomePage() {
   return (
-    <main>
+    <main
+      style={{
+        backgroundColor: "#f5f2e9",
+        minHeight: "100vh",
+        padding: "40px",
+      }}
+    >
       <img
         src="/thumbnail.jpg"
         alt="The Door Is Open"
         style={{
-          width: "70%",
-          maxWidth: "700px",
+          width: "50%",
+          maxWidth: "600px",
           margin: "0 auto",
           display: "block",
         }}
