@@ -2,7 +2,7 @@ export default function HomePage() {
   return (
     <main>
       <img
-        src="/door-hero.jpg"
+        src="/thumbnail.jpg"
         alt="The Door Is Open"
         style={{
           width: "100%",
