@@ -1,5 +1,8 @@
 export default function HomePage() {
   const buttonStyle = {
+    display: "block",
+    textDecoration: "none",
+    textAlign: "center" as const,
     padding: "16px 28px",
     borderRadius: "14px",
     border: "2px solid #c9a24a",
@@ -20,7 +23,7 @@ export default function HomePage() {
         alignItems: "center",
         gap: "70px",
         minHeight: "100vh",
-        background: "linear-gradient(135deg, #f5f2e9, #d9ead7)",
+        background: "linear-gradient(135deg, #f8f6ef, #ece6d4)",
         padding: "40px",
       }}
     >
@@ -40,7 +43,7 @@ export default function HomePage() {
           display: "flex",
           flexDirection: "column",
           gap: "18px",
-          minWidth: "300px",
+          minWidth: "330px",
           textAlign: "center",
         }}
       >
@@ -55,11 +58,11 @@ export default function HomePage() {
           GoldTrack Rewards
         </h1>
 
-        <button style={buttonStyle}>JOIN</button>
-        <button style={buttonStyle}>BE COUNTED</button>
-        <button style={buttonStyle}>PARTICIPATE</button>
-        <button style={buttonStyle}>CONTACT US</button>
-        <button style={buttonStyle}>ENTER</button>
+        <a href="/join" style={buttonStyle}>JOIN</a>
+        <a href="/be-counted" style={buttonStyle}>BE COUNTED</a>
+        <a href="/participate" style={buttonStyle}>PARTICIPATE</a>
+        <a href="/contact" style={buttonStyle}>CONTACT US</a>
+        <a href="/enter" style={buttonStyle}>ENTER</a>
       </div>
     </main>
   );
