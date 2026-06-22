@@ -34,6 +34,7 @@ export default function AboutPage() {
       <header
         style={{
           background: "#061827",
-          </main>
-          );
-        }
+        }}
+        ></header>
+          
+        
