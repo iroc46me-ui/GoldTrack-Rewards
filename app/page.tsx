@@ -11,8 +11,8 @@ export default function HomePage() {
         src="/thumbnail.jpg"
         alt="The Door Is Open"
         style={{
-          width: "50%",
-          maxWidth: "600px",
+          width: "40%",
+          maxWidth: "500px",
           margin: "0 auto",
           display: "block",
         }}
