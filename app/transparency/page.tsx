@@ -56,18 +56,29 @@ export default function TransparencyPage() {
         />
 
         {/* Community History */}
-        <a
-          href="/community"
-          aria-label="Community History"
-          style={{
-            position: "absolute",
-            left: "53%",
-            top: "16.5%",
-            width: "17%",
-            height: "4.5%",
-            cursor: "pointer",
-          }}
-        />
+<a
+  href="/community"
+  aria-label="Community History"
+  style={{
+    position: "absolute",
+    left: "53%",
+    top: "16%",
+    width: "18%",
+    height: "5.5%",
+    cursor: "pointer",
+    borderRadius: "14px",
+    transition: "all .35s ease",
+    boxShadow: "0 0 0px rgba(255,215,100,0)",
+  }}
+  onMouseOver={(e) =>
+    e.currentTarget.style.boxShadow =
+      "0 0 18px rgba(255,215,100,.75)"
+  }
+  onMouseOut={(e) =>
+    e.currentTarget.style.boxShadow =
+      "0 0 0px rgba(255,215,100,0)"
+  }
+/>
 
         {/* Governance Records */}
         <a
