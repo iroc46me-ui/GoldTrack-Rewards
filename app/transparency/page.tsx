@@ -55,29 +55,19 @@ export default function TransparencyPage() {
           }}
         />
 
-        {/* Community History */}
+        
+      {/* Community History */}
 <a
   href="/community"
   aria-label="Community History"
+  className="ghostLantern"
   style={{
     position: "absolute",
     left: "53%",
     top: "16%",
     width: "18%",
     height: "5.5%",
-    cursor: "pointer",
-    borderRadius: "14px",
-    transition: "all .35s ease",
-    boxShadow: "0 0 0px rgba(255,215,100,0)",
   }}
-  onMouseOver={(e) =>
-    e.currentTarget.style.boxShadow =
-      "0 0 18px rgba(255,215,100,.75)"
-  }
-  onMouseOut={(e) =>
-    e.currentTarget.style.boxShadow =
-      "0 0 0px rgba(255,215,100,0)"
-  }
 />
 
         {/* Governance Records */}
@@ -108,6 +98,19 @@ export default function TransparencyPage() {
           }}
         />
       </div>
-    </main>
+    
+       <style>{`
+  .ghostLantern {
+    cursor: pointer;
+    border-radius: 14px;
+    box-shadow: 0 0 0px rgba(255,215,100,0);
+    transition: box-shadow .35s ease;
+  }
+
+  .ghostLantern:hover {
+    box-shadow: 0 0 18px rgba(255,215,100,.75);
+  }
+`}</style>
+</main>
   );
 }
