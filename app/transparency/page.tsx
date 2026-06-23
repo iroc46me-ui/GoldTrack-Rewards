@@ -63,10 +63,10 @@ export default function TransparencyPage() {
   className="ghostLantern"
   style={{
     position: "absolute",
-    left: "53%",
-    top: "16%",
+    left: "50%",
+    top: "14%",
     width: "18%",
-    height: "5.5%",
+    height: "3.5%",
   }}
 />
 
