@@ -85,15 +85,16 @@ export default function TransparencyPage() {
         />
 
         {/* Join / Be Counted top button */}
-        <a
-          href="/join"
-          aria-label="Join Be Counted"
-          style={{
+          <a
+  href="/join"
+  aria-label="Join Be Counted"
+  className="ghostLantern"
+  style={{
             position: "absolute",
             right: "2%",
-            top: "1.%",
-            width: "12%",
-            height: "1.5%",
+top: "1%",
+width: "12%",
+height: "4%",
             cursor: "pointer",
           }}
         />
