@@ -34,7 +34,7 @@ export default function TransparencyPage() {
           style={{
             position: "absolute",
             left: "9%",
-            top: "19.5%",
+            top: "17.5%",
             width: "19%",
             height: "5.5%",
             cursor: "pointer",
@@ -48,7 +48,7 @@ export default function TransparencyPage() {
           style={{
             position: "absolute",
             left: "31%",
-            top: "19.5%",
+            top: "17.5%",
             width: "20%",
             height: "5.5%",
             cursor: "pointer",
@@ -62,7 +62,7 @@ export default function TransparencyPage() {
           style={{
             position: "absolute",
             left: "53%",
-            top: "19.5%",
+            top: "17.5%",
             width: "20%",
             height: "5.5%",
             cursor: "pointer",
@@ -76,7 +76,7 @@ export default function TransparencyPage() {
           style={{
             position: "absolute",
             left: "75%",
-            top: "19.5%",
+            top: "17.5%",
             width: "20%",
             height: "5.5%",
             cursor: "pointer",
