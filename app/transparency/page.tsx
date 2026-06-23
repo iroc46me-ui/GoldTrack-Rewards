@@ -90,9 +90,9 @@ export default function TransparencyPage() {
           style={{
             position: "absolute",
             right: "2%",
-            top: "1.5%",
+            top: "1.%",
             width: "12%",
-            height: "2.5%",
+            height: "1.5%",
             cursor: "pointer",
           }}
         />
