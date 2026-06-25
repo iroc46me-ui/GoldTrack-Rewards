@@ -16,9 +16,9 @@ export default function IdeasPage() {
           style={{
             position: "absolute",
             left: "36%",
-            top: "91%",
-            width: "28%",
-            height: "5%",
+            top: "89%",
+            width: "25%",
+            height: "4%",
           }}
         />
 
