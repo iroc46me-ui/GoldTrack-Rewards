@@ -7,7 +7,7 @@ export default function IdeasPage() {
         style={{
           width: "100%",
           maxWidth: "1200px",
-          display: "block",
+          display: "block", 
           margin: "0 auto",
         }}
       />
