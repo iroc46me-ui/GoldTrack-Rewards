@@ -2,8 +2,8 @@ export default function IdeasPage() {
   return (
     <main style={{ margin: 0, background: "#061827", minHeight: "100vh" }}>
       <img
-        src="/ideas-and-inovation.jpg"
-        alt="Ideas and Innovation"
+        src="/ideas-and-inovation.jpg" 
+        alt="Ideas and Inovation"
         style={{
           width: "100%",
           maxWidth: "1200px",
