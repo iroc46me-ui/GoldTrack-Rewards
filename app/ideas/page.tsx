@@ -16,7 +16,7 @@ export default function IdeasPage() {
         }}
       >
         <img
-          src="/ideas-%26-innovation.jpg"
+          src="/ideas-and-innovation.jpg"
           alt="GoldTrack Rewards Ideas and Innovation"
           style={{
             width: "100%",
