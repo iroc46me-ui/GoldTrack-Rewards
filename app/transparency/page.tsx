@@ -33,8 +33,8 @@ export default function TransparencyPage() {
   aria-label="Browse Archives"
   style={{
     position: "absolute",
-    left: "30%",
-    top: "17%",
+    left: "15%",
+    top: "16.5%",
     width: "19%",
     height: "3.5%",
     cursor: "pointer",
@@ -67,7 +67,7 @@ export default function TransparencyPage() {
   aria-label="Community History"
   style={{
     position: "absolute",
-    left: "60%",
+    left: "50%",
     top: "17.5%",
     width: "20%",
     height: "3%",
