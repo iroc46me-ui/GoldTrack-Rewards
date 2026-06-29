@@ -34,8 +34,8 @@ export default function TransparencyPage() {
   aria-label="Browse Archives"
   style={{
     position: "absolute",
-    left: "13.%",
-    top: "17.5%",
+    left: "20.%",
+    top: "17%",
     width: "19%",
     height: "3.5%",
     cursor: "pointer",
@@ -51,8 +51,8 @@ export default function TransparencyPage() {
   aria-label="Initiative Records"
   style={{
     position: "absolute",
-    left: "28.5%",
-    top: "17.5%",
+    left: "29%",
+    top: "16%",
     width: "19%",
     height: "3.5%",
     cursor: "pointer",
@@ -69,9 +69,9 @@ export default function TransparencyPage() {
   style={{
     position: "absolute",
     left: "51.5%",
-    top: "17.5%",
-    width: "19.5%",
-    height: "3.5%",
+    top: "16%",
+    width: "20%",
+    height: "3%",
     cursor: "pointer",
     background: "rgba(255, 0, 0, 0.22)",
     border: "2px solid red",
@@ -87,8 +87,8 @@ export default function TransparencyPage() {
     position: "absolute",
     left: "73%",
     top: "17.5%",
-    width: "19%",
-    height: "3.5%",
+    width: "19.5%",
+    height: "3%",
     cursor: "pointer",
     background: "rgba(255, 0, 0, 0.22)",
     border: "2px solid red",
