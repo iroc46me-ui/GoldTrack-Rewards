@@ -94,7 +94,22 @@ export default function TransparencyPage() {
   zIndex: 100,
 }}
 />
-        
+        {/* Explore The Archive bottom button */}
+<a
+  href="/archive"
+  aria-label="Explore The Archive"
+  style={{
+    position: "absolute",
+    left: "61%",
+    top: "91%",
+    width: "27%",
+    height: "5%",
+    cursor: "pointer",
+    background: "rgba(255, 0, 0, 0.22)",
+    border: "2px solid red",
+    zIndex: 100,
+  }}
+/>
         
          
        {/* Join / Be Counted top button */}
