@@ -34,7 +34,7 @@ export default function TransparencyPage() {
   aria-label="Browse Archives"
   style={{
     position: "absolute",
-    left: "20.%",
+    left: "25.%",
     top: "17%",
     width: "19%",
     height: "3.5%",
@@ -95,49 +95,7 @@ export default function TransparencyPage() {
     zIndex: 100,
   }}
 />
-        {/* Initiative Records */}
-        <a
-          href="/initiatives"
-          aria-label="Initiative Records"
-          style={{
-            position: "absolute",
-            left: "31%",
-            top: "16.5%",
-            width: "16%",
-            height: "4.5%",
-            cursor: "pointer",
-          }}
-        />
-
         
-      {/* Community History */}
-<a
-  href="/community"
-  aria-label="Community History"
-  className="ghostLantern"
-  style={{
-    position: "absolute",
-    left: "55%",
-    top: "17%",
-    width: "18%",
-    height: "3.5%",
-  }}
-/>
-
-        {/* Governance Records */}
-        <a
-          href="/charter"
-          aria-label="Governance Records"
-          style={{
-            position: "absolute",
-            left: "75%",
-            top: "16.5%",
-            width: "17%",
-            height: "4.5%",
-            cursor: "pointer",
-          }}
-        />
-
         {/* Join / Be Counted top button */}
           <a
   href="/join"
