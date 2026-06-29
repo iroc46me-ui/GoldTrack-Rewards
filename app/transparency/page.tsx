@@ -34,7 +34,7 @@ export default function TransparencyPage() {
   style={{
     position: "absolute",
     left: "7.5%",
-    top: "17%",
+    top: "15%",
     width: "19.5%",
     height: "3.5%",
     cursor: "pointer",
