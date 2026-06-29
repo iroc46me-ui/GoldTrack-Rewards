@@ -84,7 +84,7 @@ export default function TransparencyPage() {
   aria-label="Governance Records"
   style={{
   position: "absolute",
-  left: "71%",
+  left: "72%",
   top: "17%",
   width: "20%",
   height: "3.5%",
