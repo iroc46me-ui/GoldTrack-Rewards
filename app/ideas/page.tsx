@@ -35,4 +35,4 @@ export default function IdeasPage() {
     border: 2px solid rgba(120, 75, 20, 0.8);
     box-shadow: 0 0 18px rgba(120, 75, 20, 0.75);
   }
-`}</style>
+`}</style>>
