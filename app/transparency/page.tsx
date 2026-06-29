@@ -95,9 +95,9 @@ export default function TransparencyPage() {
   }}
 />
         
-        {/* Join / Be Counted top button */}
+        
          
- <        {/* Join / Be Counted top button */}
+       {/* Join / Be Counted top button */}
         <a
           href="/join"
           aria-label="Join Be Counted"
