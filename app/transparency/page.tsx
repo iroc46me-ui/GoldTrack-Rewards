@@ -28,7 +28,7 @@ export default function TransparencyPage() {
         />
 
         {/* Browse Archives */}
-        {/* Browse Archives */}
+        
 <a
   href="/archive"
   aria-label="Browse Archives"
