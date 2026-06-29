@@ -33,7 +33,7 @@ export default function TransparencyPage() {
   aria-label="Browse Archives"
   style={{
     position: "absolute",
-    left: "30.%",
+    left: "30%",
     top: "17%",
     width: "19%",
     height: "3.5%",
@@ -111,18 +111,5 @@ height: "4%",
         />
       </div>
     
-       <style>{`
-  .ghostLantern {
-    cursor: pointer;
-    border-radius: 14px;
-    box-shadow: 0 0 0px rgba(255,215,100,0);
-    transition: box-shadow .35s ease;
-  }
-
-  .ghostLantern:hover {
-    box-shadow: 0 0 18px rgba(255,215,100,.75);
-  }
-`}</style>
-</main>
-  );
-}
+       
+  
