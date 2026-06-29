@@ -34,8 +34,8 @@ export default function TransparencyPage() {
   aria-label="Browse Archives"
   style={{
     position: "absolute",
-    left: "6.5%",
-    top: "16.2%",
+    left: "8.%",
+    top: "17.5%",
     width: "19%",
     height: "3%",
     cursor: "pointer",
@@ -51,8 +51,8 @@ export default function TransparencyPage() {
   aria-label="Initiative Records"
   style={{
     position: "absolute",
-    left: "24.5%",
-    top: "16.2%",
+    left: "27.5%",
+    top: "17.5%",
     width: "19%",
     height: "3%",
     cursor: "pointer",
@@ -68,8 +68,8 @@ export default function TransparencyPage() {
   aria-label="Community History"
   style={{
     position: "absolute",
-    left: "49.5%",
-    top: "16.2%",
+    left: "51.5%",
+    top: "17.5%",
     width: "19%",
     height: "3%",
     cursor: "pointer",
@@ -86,8 +86,8 @@ export default function TransparencyPage() {
   style={{
     position: "absolute",
     left: "73%",
-    top: "16.2%",
-    width: "24%",
+    top: "17.5%",
+    width: "18%",
     height: "3%",
     cursor: "pointer",
     background: "rgba(255, 0, 0, 0.22)",
