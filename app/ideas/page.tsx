@@ -22,21 +22,17 @@ export default function IdeasPage() {
           }}
         />
 
-        <style
-  dangerouslySetInnerHTML={{
-    __html: `
-      .ghostLantern {
-        cursor: pointer;
-        border-radius: 12px;
-        border: 2px solid rgba(90, 55, 15, 0.45);
-        box-shadow: 0 0 8px rgba(90, 55, 15, 0.35);
-        transition: box-shadow .25s ease, border .25s ease;
-      }
+        <style>{`
+  .ghostLantern {
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid rgba(90, 55, 15, 0.45);
+    box-shadow: 0 0 8px rgba(90, 55, 15, 0.35);
+    transition: box-shadow .25s ease, border .25s ease;
+  }
 
-      .ghostLantern:hover {
-        border: 2px solid rgba(120, 75, 20, 0.8);
-        box-shadow: 0 0 18px rgba(120, 75, 20, 0.75);
-      }
-    `,
-  }}
-/>
+  .ghostLantern:hover {
+    border: 2px solid rgba(120, 75, 20, 0.8);
+    box-shadow: 0 0 18px rgba(120, 75, 20, 0.75);
+  }
+`}</style>
