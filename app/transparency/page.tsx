@@ -83,16 +83,16 @@ export default function TransparencyPage() {
   href="/charter"
   aria-label="Governance Records"
   style={{
-    position: "absolute",
-    left: "73%",
-    top: "17.3%",
-    width: "19.5%",
-    height: "3%",
-    cursor: "pointer",
-    background: "rgba(255, 0, 0, 0.22)",
-    border: "2px solid red",
-    zIndex: 100,
-  }}
+  position: "absolute",
+  right: "2%",
+  top: "1%",
+  width: "12%",
+  height: "4%",
+  cursor: "pointer",
+  background: "rgba(255, 0, 0, 0.22)",
+  border: "2px solid red",
+  zIndex: 100,
+}}
 />
         
         
