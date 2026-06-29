@@ -12,7 +12,11 @@ export default function IdeasPage() {
           href="/join"
           aria-label="Join Be Counted Participate"
           style={{
-            position: "absolute",
+            background: "rgba(255,0,0,0.25)",
+border: "2px solid red",
+zIndex: 100,
+
+             position: "absolute",
             left: "34%",
             top: "90.5%",
             width: "32%",
