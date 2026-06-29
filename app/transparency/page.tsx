@@ -68,7 +68,7 @@ export default function TransparencyPage() {
   style={{
     position: "absolute",
     left: "50.2%",
-    top: "17.5%",
+    top: "18%",
     width: "20.2%",
     height: "3%",
     cursor: "pointer",
@@ -103,10 +103,10 @@ export default function TransparencyPage() {
           aria-label="Join Be Counted"
           style={{
             position: "absolute",
-            right: "2%",
+            right: "1%",
             top: "1%",
             width: "12.5%",
-            height: "2%",
+            height: "1%",
             cursor: "pointer",
           }}
         />
