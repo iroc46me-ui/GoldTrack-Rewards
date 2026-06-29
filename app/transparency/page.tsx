@@ -41,7 +41,7 @@ export default function TransparencyPage() {
     background: "rgba(255, 0, 0, 0.22)",
     border: "2px solid red",
     zIndex: 100,
-  }
+  }}
 />
 
 {/* Initiative Records */}
