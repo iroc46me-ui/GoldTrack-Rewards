@@ -34,9 +34,9 @@ export default function TransparencyPage() {
   aria-label="Browse Archives"
   style={{
     position: "absolute",
-    left: "0.5%",
-    top: "18.2%",
-    width: "22%",
+    left: "2.5%",
+    top: "16.2%",
+    width: "19%",
     height: "4.8%",
     cursor: "pointer",
     background: "rgba(255, 0, 0, 0.22)",
