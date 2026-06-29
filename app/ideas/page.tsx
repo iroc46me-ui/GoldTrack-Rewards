@@ -20,7 +20,7 @@ zIndex: 100,
             left: "34%",
             top: "93%",
             width: "32%",
-            height: "4.5%",
+            height: "3%",
             cursor: "pointer",
           }}
         />
