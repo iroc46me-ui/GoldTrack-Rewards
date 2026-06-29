@@ -84,7 +84,7 @@ export default function TransparencyPage() {
   aria-label="Governance Records"
   style={{
   position: "absolute",
-  right: "75%",
+  left: "75%",
   top: "17.56%",
   width: "12%",
   height: "4%",
@@ -103,7 +103,7 @@ export default function TransparencyPage() {
           aria-label="Join Be Counted"
           style={{
             position: "absolute",
-            right: "1%",
+            right: "2%",
             top: "1%",
             width: "12.5%",
             height: "1%",
