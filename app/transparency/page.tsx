@@ -34,10 +34,10 @@ export default function TransparencyPage() {
   aria-label="Browse Archives"
   style={{
     position: "absolute",
-    left: "2.5%",
+    left: "6.5%",
     top: "16.2%",
     width: "19%",
-    height: "4.8%",
+    height: "3%",
     cursor: "pointer",
     background: "rgba(255, 0, 0, 0.22)",
     border: "2px solid red",
@@ -52,9 +52,9 @@ export default function TransparencyPage() {
   style={{
     position: "absolute",
     left: "24.5%",
-    top: "18.2%",
-    width: "23%",
-    height: "4.8%",
+    top: "16.2%",
+    width: "19%",
+    height: "3%",
     cursor: "pointer",
     background: "rgba(255, 0, 0, 0.22)",
     border: "2px solid red",
@@ -69,9 +69,9 @@ export default function TransparencyPage() {
   style={{
     position: "absolute",
     left: "49.5%",
-    top: "18.2%",
-    width: "24%",
-    height: "4.8%",
+    top: "16.2%",
+    width: "19%",
+    height: "3%",
     cursor: "pointer",
     background: "rgba(255, 0, 0, 0.22)",
     border: "2px solid red",
@@ -85,10 +85,10 @@ export default function TransparencyPage() {
   aria-label="Governance Records"
   style={{
     position: "absolute",
-    left: "75%",
-    top: "18.2%",
+    left: "73%",
+    top: "16.2%",
     width: "24%",
-    height: "4.8%",
+    height: "3%",
     cursor: "pointer",
     background: "rgba(255, 0, 0, 0.22)",
     border: "2px solid red",
