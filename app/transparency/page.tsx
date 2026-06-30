@@ -109,11 +109,7 @@ export default function TransparencyPage() {
     border: "2px solid red",
     zIndex: 100,
   }}
-/>
-       </div>
-    </main>
-  );
-}       
+/>     
          
        {/* Join / Be Counted top button */}
         
@@ -132,3 +128,7 @@ export default function TransparencyPage() {
     zIndex: 100,
   }}
 />
+      </div>
+    </main>
+  );
+}
