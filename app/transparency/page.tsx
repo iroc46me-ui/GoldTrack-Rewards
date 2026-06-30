@@ -113,20 +113,19 @@ export default function TransparencyPage() {
         
          
        {/* Join / Be Counted top button */}
-        <a
-          href="/join"
-          aria-label="Join Be Counted"
-          style={{
-            position: "absolute",
-            right: "2%",
-            top: "1%",
-            width: "12.5%",
-            height: "1%",
-            cursor: "pointer",
-          }}
-        />
-
-      </div>
-    </main>
-  );
-}
+        
+<a
+  href="/join"
+  aria-label="Join Be Counted"
+  style={{
+    position: "absolute",
+    right: "2%",
+    top: "1.2%",
+    width: "14%",
+    height: "4.2%",
+    cursor: "pointer",
+    background: "rgba(255,0,0,0.22)",
+    border: "2px solid red",
+    zIndex: 100,
+  }}
+/>
