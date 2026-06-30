@@ -119,9 +119,9 @@ export default function TransparencyPage() {
   style={{
     position: "absolute",
     right: "2%",
-    top: "1.2%",
-    width: "14%",
-    height: "4.2%",
+    top: "1%",
+    width: "12%",
+    height: "3.8%",
     cursor: "pointer",
     background: "rgba(255,0,0,0.22)",
     border: "2px solid red",
