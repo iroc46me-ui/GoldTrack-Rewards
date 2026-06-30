@@ -23,7 +23,7 @@ export default function TransparencyPage() {
           style={{
             width: "100%",
             height: "auto",
-            display: "block",
+            display: "block", 
           }}
         />
 
