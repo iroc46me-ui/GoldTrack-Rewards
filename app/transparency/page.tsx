@@ -67,9 +67,9 @@ export default function TransparencyPage() {
   aria-label="Community History"
   style={{
     position: "absolute",
-    left: "51%",
+    left: "52%",
     top: "17%",
-    width: "20.2%",
+    width: "19.5%",
     height: "3%",
     cursor: "pointer",
     background: "rgba(255, 0, 0, 0.22)",
