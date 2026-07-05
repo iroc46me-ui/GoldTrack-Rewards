@@ -100,8 +100,8 @@ export default function TransparencyPage() {
   aria-label="Explore The Archive"
   style={{
     position: "absolute",
-    left: "73%",
-    top: "96.5%",
+    left: "75%",
+    top: "96%",
     width: "23%",
     height: "3%",
     cursor: "pointer",
