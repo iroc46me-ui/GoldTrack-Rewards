@@ -1,71 +1,99 @@
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-sky-50 to-white">
+    <main className="min-h-screen bg-gradient-to-b from-sky-100 via-white to-sky-50">
 
-      <section className="max-w-6xl mx-auto px-8 py-20 text-center">
+      <section className="max-w-7xl mx-auto px-8 py-16 text-center">
 
-        <h1 className="text-6xl font-bold text-slate-900">
-          About GoldTrack Rewards
+        <h1 className="text-6xl font-serif font-bold text-slate-900">
+          ABOUT GOLDTRACK REWARDS
         </h1>
 
-        <p className="text-xl text-slate-600 max-w-3xl mx-auto mt-6">
-          Building a transparent rewards ecosystem where communities,
-          initiatives, knowledge and stewardship work together to create
-          lasting value.
+        <p className="mt-6 text-2xl text-slate-700 max-w-4xl mx-auto">
+          Building a transparent ecosystem where people, ideas,
+          initiatives, knowledge, and stewardship work together
+          for future generations.
         </p>
 
-        <div className="flex justify-center gap-4 mt-10 flex-wrap">
+        <div className="mt-10 flex flex-wrap justify-center gap-5">
 
           <a href="/how-it-works"
-             className="px-8 py-4 rounded-xl bg-emerald-700 text-white font-semibold hover:bg-emerald-800">
-            How It Works
+             className="rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-4 font-semibold shadow-lg">
+             How It Works
           </a>
 
           <a href="/community"
-             className="px-8 py-4 rounded-xl bg-sky-700 text-white font-semibold hover:bg-sky-800">
-            Our Community
+             className="rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white px-8 py-4 font-semibold shadow-lg">
+             Our Community
           </a>
 
-          <a href="/charter"
-             className="px-8 py-4 rounded-xl bg-violet-700 text-white font-semibold hover:bg-violet-800">
-            Read The Charter
+          <a href="/initiatives"
+             className="rounded-xl bg-violet-700 hover:bg-violet-800 text-white px-8 py-4 font-semibold shadow-lg">
+             Initiatives
           </a>
 
         </div>
 
-        <div className="mt-20 grid md:grid-cols-3 gap-8">
+        <div className="mt-16 bg-white rounded-3xl shadow-xl border border-slate-200 p-10">
 
-          <div className="rounded-3xl bg-white shadow-xl p-8 border-t-4 border-emerald-600">
-            <h2 className="text-3xl font-bold mb-4">
-              Our Mission
-            </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
 
-            <p>
-              Create practical tools that strengthen people, encourage
-              participation, and support meaningful community initiatives.
+            <div className="text-left">
+
+              <h2 className="text-4xl font-serif font-bold text-slate-900">
+                Why GoldTrack Rewards Exists
+              </h2>
+
+              <p className="mt-6 text-lg leading-8 text-slate-700">
+                GoldTrack Rewards was created to encourage participation,
+                preserve knowledge, recognize meaningful contributions,
+                and provide practical tools that strengthen communities.
+              </p>
+
+              <p className="mt-5 text-lg leading-8 text-slate-700">
+                The mission remains the mission.
+                The token is simply one tool that helps support that mission.
+              </p>
+
+            </div>
+
+            <div className="flex justify-center">
+
+              <div className="w-72 h-72 rounded-full border-8 border-yellow-500 bg-gradient-to-br from-emerald-900 to-slate-800 flex items-center justify-center shadow-2xl">
+
+                <span className="text-7xl font-bold text-yellow-400">
+                  GTR
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mt-16">
+
+          <div className="rounded-2xl bg-emerald-50 p-8 shadow-md">
+            <h3 className="text-2xl font-bold">Mission</h3>
+            <p className="mt-4">
+              People first. Community first. Long-term stewardship.
             </p>
           </div>
 
-          <div className="rounded-3xl bg-white shadow-xl p-8 border-t-4 border-blue-600">
-            <h2 className="text-3xl font-bold mb-4">
-              Our Values
-            </h2>
-
-            <p>
-              Transparency. Stewardship. Service. Participation.
-              Long-term thinking.
+          <div className="rounded-2xl bg-sky-50 p-8 shadow-md">
+            <h3 className="text-2xl font-bold">Vision</h3>
+            <p className="mt-4">
+              Every contribution has value.
+              Every participant has a place.
             </p>
           </div>
 
-          <div className="rounded-3xl bg-white shadow-xl p-8 border-t-4 border-amber-500">
-            <h2 className="text-3xl font-bold mb-4">
-              Our Vision
-            </h2>
-
-            <p>
-              A growing ecosystem where ideas become initiatives,
-              initiatives become programs, and programs become lasting
-              legacy.
+          <div className="rounded-2xl bg-amber-50 p-8 shadow-md">
+            <h3 className="text-2xl font-bold">Legacy</h3>
+            <p className="mt-4">
+              Preserve today's knowledge so tomorrow's builders
+              can begin farther ahead.
             </p>
           </div>
 
