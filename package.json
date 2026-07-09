@@ -1,5 +1,4 @@
-
-  {
+{
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,8 +10,8 @@
     "react-dom": "latest"
   },
   "devDependencies": {
-    "typescript": "latest",
+    "@types/node": "latest",
     "@types/react": "latest",
-    "@types/node": "latest"
+    "typescript": "7.0.2"
   }
 }
