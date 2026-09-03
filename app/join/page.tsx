@@ -3,80 +3,128 @@ export default function JoinPage() {
     <main
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(135deg,#f8f6ef,#e8dcc3)",
-        padding: "24px",
+        background:
+          "linear-gradient(180deg, #fff7df 0%, #f5ecd1 45%, #fff7df 100%)",
+        color: "#0b392d",
         fontFamily: "Georgia, serif",
+        padding: "32px",
       }}
     >
-      <div
+      <section
         style={{
-          maxWidth: "900px",
+          maxWidth: "1120px",
           margin: "0 auto",
-          background: "linear-gradient(135deg,#fffdf8,#f8f1e1)",
-          padding: "34px",
-          borderRadius: "25px",
-          border: "2px solid #d8c28a",
-          boxShadow: "0 15px 40px rgba(0,0,0,.15)",
+          background: "rgba(255, 250, 235, .92)",
+          border: "1px solid rgba(177,132,45,.45)",
+          borderRadius: "26px",
+          overflow: "hidden",
+          boxShadow: "0 18px 55px rgba(0,0,0,.18)",
         }}
       >
-        <h1
+        <div
           style={{
-            color: "#0d3b2e",
-            fontSize: "36px",
+            padding: "58px 36px",
             textAlign: "center",
-            marginBottom: "20px",
+            background:
+              "radial-gradient(circle at center, rgba(214,183,112,.35), transparent 45%), linear-gradient(135deg, #f8edcc, #fffaf0)",
           }}
         >
-          Join GoldTrack Rewards
-        </h1>
-
-        <hr style={{ borderColor: "#d6c28a" }} />
-
-        <h2 style={{ color: "#8b6f2c", fontSize: "28px" }}>
-          Be Counted. Be Heard.
-        </h2>
-
-        <p style={{ fontSize: "20px", lineHeight: "1.5" }}>
-          GoldTrack Rewards is more than a project. It is a community built on
-          participation, transparency, and shared purpose.
-        </p>
-
-        <p style={{ fontSize: "20px", lineHeight: "1.5" }}>
-          Membership is free. Members will receive updates, project
-          announcements, opportunities, and future rewards programs.
-        </p>
-
-        <h2 style={{ color: "#8b6f2c", fontSize: "28px" }}>
-          Benefits of Membership
-        </h2>
-
-        <ul style={{ fontSize: "20px", lineHeight: "1.6" }}>
-          <li>Community updates</li>
-          <li>Early participation opportunities</li>
-          <li>Voting opportunities</li>
-          <li>Future rewards</li>
-          <li>Special announcements</li>
-        </ul>
-
-        <div style={{ marginTop: "35px", textAlign: "center" }}>
-          <a
-            href="/"
-            style={{
-              display: "inline-block",
-              background: "linear-gradient(180deg,#d7b45a,#9b731f)",
-              color: "#0c1b2c",
-              padding: "16px 34px",
-              borderRadius: "14px",
-              textDecoration: "none",
-              fontWeight: "bold",
-              border: "2px solid #c9a24a",
-              boxShadow: "0 8px 18px rgba(0,0,0,0.18)",
-            }}
-          >
-            Return Home
-          </a>
+          <h1 style={{ fontSize: "58px", margin: 0 }}>
+            Join GoldTrack Rewards
+          </h1>
+          <p style={{ fontSize: "24px", color: "#9b6b1f", fontWeight: "bold" }}>
+            The door is open. You are welcome here.
+          </p>
+          <p style={{ maxWidth: "720px", margin: "18px auto", lineHeight: 1.7 }}>
+            This is where the journey begins — not with a transaction, but with
+            participation, purpose, and shared stewardship.
+          </p>
         </div>
-      </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "18px",
+            padding: "28px",
+          }}
+        >
+          {[
+            ["👥", "Join", "Become part of something bigger than yourself."],
+            ["✅", "Be Counted", "Your voice, ideas, and presence matter."],
+            ["🤝", "Participate", "Help shape initiatives that can outlast us."],
+          ].map(([icon, title, text]) => (
+            <div
+              key={title}
+              style={{
+                background: "#fffaf0",
+                border: "1px solid rgba(177,132,45,.45)",
+                borderRadius: "18px",
+                padding: "28px",
+                textAlign: "center",
+                boxShadow: "0 8px 22px rgba(0,0,0,.08)",
+              }}
+            >
+              <div style={{ fontSize: "38px" }}>{icon}</div>
+              <h2 style={{ color: "#9b6b1f" }}>{title}</h2>
+              <p style={{ lineHeight: 1.6 }}>{text}</p>
+            </div>
+          ))}
+        </div>
+
+        <div
+          style={{
+            margin: "0 28px 28px",
+            padding: "34px",
+            borderRadius: "22px",
+            background: "linear-gradient(135deg, #063b2d, #0b1f1a)",
+            color: "#f7efd8",
+            textAlign: "center",
+          }}
+        >
+          <h2 style={{ color: "#d6b370", fontSize: "34px" }}>
+            The mission is the mission.
+          </h2>
+          <p style={{ maxWidth: "760px", margin: "0 auto", lineHeight: 1.7 }}>
+            Some people build. Some teach. Some preserve knowledge. Some bring
+            ideas. Some simply show up and encourage others. Every contribution
+            matters.
+          </p>
+
+          <div style={{ marginTop: "30px" }}>
+            <a
+              href="/community"
+              style={{
+                display: "inline-block",
+                padding: "15px 30px",
+                borderRadius: "999px",
+                background: "linear-gradient(135deg, #f3cf73, #a87420)",
+                color: "#1d1205",
+                textDecoration: "none",
+                fontWeight: "bold",
+                marginRight: "14px",
+              }}
+            >
+              Join Our Community
+            </a>
+
+            <a
+              href="/"
+              style={{
+                display: "inline-block",
+                padding: "15px 30px",
+                borderRadius: "999px",
+                border: "1px solid rgba(214,183,112,.7)",
+                color: "#f7efd8",
+                textDecoration: "none",
+                fontWeight: "bold",
+              }}
+            >
+              Return Home
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
