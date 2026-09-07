@@ -7,7 +7,7 @@
     },
     {
       title: "Build Projects",
-      text: "Turn ideas into action. Help develop programs, solutions, and initiatives that create impact.",
+      text: "Turn ideas into action. Hel  p develop programs, solutions, and initiatives that create impact.",
     },
     {
       title: "Encourage Others",

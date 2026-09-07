@@ -1,0 +1,13 @@
+model CommunityMember {
+  id                 String   @id @default(uuid())
+  displayName        String
+  email              String   @unique
+  countryRegion      String?
+  participation      String[]
+  reasonForJoining   String?
+  commitmentAccepted Boolean  @default(false)
+  clerkUserId        String?  @unique
+  status             String   @default("ACTIVE")
+  createdAt          DateTime @default(now())
+  updatedAt temporal.updatedAt()
+}
