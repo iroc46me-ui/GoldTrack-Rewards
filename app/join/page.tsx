@@ -1,130 +1,1163 @@
-export default function JoinPage() {
-  return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background:
-          "linear-gradient(180deg, #fff7df 0%, #f5ecd1 45%, #fff7df 100%)",
-        color: "#0b392d",
-        fontFamily: "Georgia, serif",
-        padding: "32px",
-      }}
-    >
-      <section
-        style={{
-          maxWidth: "1120px",
-          margin: "0 auto",
-          background: "rgba(255, 250, 235, .92)",
-          border: "1px solid rgba(177,132,45,.45)",
-          borderRadius: "26px",
-          overflow: "hidden",
-          boxShadow: "0 18px 55px rgba(0,0,0,.18)",
-        }}
-      >
-        <div
-          style={{
-            padding: "58px 36px",
-            textAlign: "center",
-            background:
-              "radial-gradient(circle at center, rgba(214,183,112,.35), transparent 45%), linear-gradient(135deg, #f8edcc, #fffaf0)",
-          }}
-        >
-          <h1 style={{ fontSize: "58px", margin: 0 }}>
-            Join GoldTrack Rewards
-          </h1>
-          <p style={{ fontSize: "24px", color: "#9b6b1f", fontWeight: "bold" }}>
-            The door is open. You are welcome here.
-          </p>
-          <p style={{ maxWidth: "720px", margin: "18px auto", lineHeight: 1.7 }}>
-            This is where the journey begins — not with a transaction, but with
-            participation, purpose, and shared stewardship.
-          </p>
-        </div>
+  import Link from "next/link";
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "18px",
-            padding: "28px",
-          }}
-        >
-          {[
-            ["👥", "Join", "Become part of something bigger than yourself."],
-            ["✅", "Be Counted", "Your voice, ideas, and presence matter."],
-            ["🤝", "Participate", "Help shape initiatives that can outlast us."],
-          ].map(([icon, title, text]) => (
-            <div
-              key={title}
-              style={{
-                background: "#fffaf0",
-                border: "1px solid rgba(177,132,45,.45)",
-                borderRadius: "18px",
-                padding: "28px",
-                textAlign: "center",
-                boxShadow: "0 8px 22px rgba(0,0,0,.08)",
-              }}
-            >
-              <div style={{ fontSize: "38px" }}>{icon}</div>
-              <h2 style={{ color: "#9b6b1f" }}>{title}</h2>
-              <p style={{ lineHeight: 1.6 }}>{text}</p>
+  const choices = [
+    {
+      title: "Learn and Observe",
+      text: "Follow the growth of the community, explore ideas, and stay informed.",
+    },
+    {
+      title: "Build Projects",
+      text: "Turn ideas into action. Help develop programs, solutions, and initiatives that create impact.",
+    },
+    {
+      title: "Encourage Others",
+      text: "A kind word or positive perspective can strengthen and uplift our community.",
+    },
+    {
+      title: "Technical Development",
+      text: "Design, code, test, document, or support technical systems that help us grow.",
+    },
+    {
+      title: "Share Ideas",
+      text: "New ideas often lead to new opportunities. Share your thoughts and perspectives.",
+    },
+    {
+      title: "Stewardship",
+      text: "Help preserve, maintain, improve, and protect what has been built for future generations.",
+    },
+    {
+      title: "Help Organize",
+      text: "Connect people, projects, and resources. Help coordinate initiatives in your area.",
+    },
+    {
+      title: "Other",
+      text: "There may be ways to contribute that have not yet been imagined. Tell us how you can help.",
+    },
+  ];
+
+  export default function JoinPage() {
+    return (
+      <main className="page">
+        
+        <div className="canvas">
+          <img
+            className="background"
+            src="/join-our-community.png"
+            alt=""
+            draggable={false}
+          />
+
+          {/* HEADER */}
+          <header className="header">
+            <Link href="/" className="gtrLogo">
+              <span>GTR</span>
+            </Link>
+
+            <nav className="topNav">
+              <Link href="/about">About</Link>
+              <Link href="/how-it-works">How It Works</Link>
+              <Link href="/charter">The Charter</Link>
+              <Link href="/community">Our Community</Link>
+              <Link href="/transparency">Transparency</Link>
+              <Link href="/initiatives">Initiatives</Link>
+              <Link href="/news">News</Link>
+            </nav>
+
+            <Link href="/join" className="joinTop">
+              👥 &nbsp; Join / Be Counted
+            </Link>
+          </header>
+
+          {/* HERO */}
+          <section className="hero">
+            <h1>Join Our Community</h1>
+            <h2>Be Counted</h2>
+
+            <svg
+  className="heroCopySvg"
+  viewBox="0 0 560 88"
+  preserveAspectRatio="xMinYMid meet"
+>
+  <text
+    x="0"
+    y="18"
+    fill="#34483f"
+    fontFamily="Arial, sans-serif"
+    fontSize="15"
+    fontWeight="700"
+  >
+    <tspan x="0" dy="0">
+      Every community begins with a single choice.
+    </tspan>
+
+    <tspan x="0" dy="20">
+      When you choose to be counted, you become part of
+    </tspan>
+
+    <tspan x="0" dy="20">
+      the ongoing story of GoldTrack Rewards.
+    </tspan>
+
+    <tspan x="0" dy="20">
+      Together, we can create lasting impact.
+    </tspan>
+  </text>
+</svg>
+          </section>
+
+          {/* LEFT COLUMN */}
+          <section className="aboutYou">
+           <svg
+  className="sectionHeadingSvg"
+  viewBox="0 0 520 36"
+  preserveAspectRatio="xMinYMid meet"
+>
+  <text
+    x="0"
+    y="26"
+    fill="#4b3518"
+    fontFamily='Georgia, "Times New Roman", serif'
+    fontSize="22"
+    fontWeight="800"
+  >
+    ♟  Tell Us About Yourself
+  </text>
+</svg>
+
+            <div className="twoInputs">
+              <input name="displayName" placeholder="♟   Display Name" />
+              <input
+                name="email"
+                type="email"
+                placeholder="✉   Email Address"
+              />
             </div>
-          ))}
+
+            <input
+              name="country"
+              className="country"
+              placeholder="◎   Country / Region"
+            />
+          </section>
+
+          <section className="participate">
+            <svg
+  className="sectionHeadingSvg"
+  viewBox="0 0 600 36"
+  preserveAspectRatio="xMinYMid meet"
+>
+  <text
+    x="0"
+    y="26"
+    fill="#4b3518"
+    fontFamily='Georgia, "Times New Roman", serif'
+    fontSize="22"
+    fontWeight="800"
+  >
+    👥  How Would You Like to Participate?
+  </text>
+</svg>
+
+            <div className="choiceGrid">
+              {choices.map((choice) => (
+                <label className="choice" key={choice.title}>
+                  <input type="checkbox" name="participation" />
+
+                  <span className="choiceIcon">◇</span>
+
+                  <span className="choiceCopy">
+                    <strong>{choice.title}</strong>
+                    <small>{choice.text}</small>
+                  </span>
+                </label>
+              ))}
+            </div>
+          </section>
+
+          {/* CENTER RIGHT */}
+          <section className="why">
+            <svg
+  className="sectionHeadingSvg"
+  viewBox="0 0 600 36"
+  preserveAspectRatio="xMinYMid meet"
+>
+  <text
+    x="0"
+    y="26"
+    fill="#4b3518"
+    fontFamily='Georgia, "Times New Roman", serif'
+    fontSize="22"
+    fontWeight="800"
+  >
+    💬  Why Do You Want to Be Counted?
+  </text>
+</svg>
+
+            <svg
+  className="whyCopySvg"
+  viewBox="0 0 600 50"
+  preserveAspectRatio="xMinYMid meet"
+>
+  <text
+    x="0"
+    y="18"
+    fill="#34483f"
+    fontFamily='Arial, sans-serif'
+    fontSize="15"
+    fontWeight="700"
+  >
+    <tspan x="0" dy="0">
+      Your story matters. Share in a few words what inspires you to join
+    </tspan>
+    <tspan x="0" dy="20">
+      and how you hope to contribute to our mission.
+    </tspan>
+  </text>
+</svg>
+
+
+            <textarea
+              name="message"
+              maxLength={500}
+              placeholder="Write your message here..."
+            />
+
+            <small>0/500 characters</small>
+          </section>
+
+          <section className="commitment">
+            <svg
+  className="sectionHeadingSvg"
+  viewBox="0 0 520 36"
+  preserveAspectRatio="xMinYMid meet"
+>
+  <text
+    x="0"
+    y="26"
+    fill="#4b3518"
+    fontFamily='Georgia, "Times New Roman", serif'
+    fontSize="22"
+    fontWeight="800"
+  >
+    ◈  Community Commitment
+  </text>
+</svg>   
+
+            <svg
+  className="commitmentCopySvg"
+  viewBox="0 0 500 32"
+  preserveAspectRatio="xMinYMid meet"
+>
+  <text
+    x="0"
+    y="21"
+    fill="#34483f"
+    fontFamily="Arial, sans-serif"
+    fontSize="15"
+    fontWeight="700"
+  >
+    We build this community on shared values.
+  </text>
+</svg>
+
+            <div className="values">
+              <article>
+                <b>♡</b>
+                <svg className="valueCopySvg" viewBox="0 0 140 42">
+  <text
+    x="70"
+    y="16"
+    textAnchor="middle"
+    fill="#34483f"
+    fontFamily="Arial, sans-serif"
+    fontSize="13"
+    fontWeight="700"
+  >
+    <tspan x="70" dy="0">Mission</tspan>
+    <tspan x="70" dy="16">before ego.</tspan>
+  </text>
+</svg>
+              </article>
+
+              <article>
+                <b>♧</b>
+                <svg className="valueCopySvg" viewBox="0 0 140 42">
+  <text
+    x="70"
+    y="16"
+    textAnchor="middle"
+    fill="#34483f"
+    fontFamily="Arial, sans-serif"
+    fontSize="13"
+    fontWeight="700"
+  >
+    <tspan x="70" dy="0">Transparency</tspan>
+    <tspan x="70" dy="16">over convenience.</tspan>
+  </text>
+</svg>
+              </article>
+
+              <article>
+                <b>♧</b>
+                <svg className="valueCopySvg" viewBox="0 0 140 42">
+  <text
+    x="70"
+    y="16"
+    textAnchor="middle"
+    fill="#34483f"
+    fontFamily="Arial, sans-serif"
+    fontSize="13"
+    fontWeight="700"
+  >
+    <tspan x="70" dy="0">Stewardship</tspan>
+    <tspan x="70" dy="16">over extraction.</tspan>
+  </text>
+</svg>
+              </article>
+
+              <article>
+                <b>◎</b>
+                <span>
+                  Participation
+                  <br />
+                  over exclusion.
+                </span>
+              </article>
+            </div>
+
+            <label className="agreement">
+  <input type="checkbox" />
+
+  <svg
+    className="agreementCopySvg"
+    viewBox="0 0 430 28"
+    preserveAspectRatio="xMinYMid meet"
+  >
+    <text
+      x="0"
+      y="19"
+      fill="#34483f"
+      fontFamily="Arial, sans-serif"
+      fontSize="14"
+      fontWeight="700"
+    >
+      I understand and support this commitment.
+    </text>
+  </svg>
+</label>
+          </section>
+
+          {/* RIGHT RECORD PANEL */}
+          <aside className="record">
+            <div className="recordSymbol">▥</div>
+
+            <h3>
+              You Become Part of
+              <br />
+              Our Community
+            </h3>
+
+            <p>
+              Your personal information remains protected according to your
+              preferences and applicable policies.
+            </p>
+
+            <p>
+              However, your participation may become part of the historical
+              record of our community through anonymous counts, milestones,
+              archives, and stewardship records.
+            </p>
+
+            <p>
+              Future generations may never
+              <br />
+              know your name.
+            </p>
+
+            <strong>
+              But they may know
+              <br />
+              that you were here.
+            </strong>
+          </aside>
+
+          {/* LOWER STRIP */}
+          <section className="lowerLeft">
+            <div className="roundIcon">👥</div>
+
+            <div>
+              <strong>There is no wrong way to participate.</strong>
+              <p>
+                Choose the path that best reflects how
+                <br />
+                you would like to contribute.
+              </p>
+            </div>
+          </section>
+
+          <section className="beCounted">
+            <button type="button">
+              👥 &nbsp; Be Counted
+            </button>
+
+            <strong>Join the Community Today</strong>
+          </section>
+
+          <section className="lowerRight">
+            <p>Every honest contribution matters.</p>
+
+            <strong>
+              You Matter. You Can Help.
+              <br />
+              So Be Counted.
+            </strong>
+          </section>
+
+          {/* FOOTER */}
+          <footer className="footer">
+            <Link href="/" className="footerLogo">
+              GTR
+            </Link>
+
+            <span className="quote">
+              “The test of all things is time.” — Solon
+            </span>
+
+            <nav>
+              <Link href="/about">About</Link>
+              <Link href="/how-it-works">How It Works</Link>
+              <Link href="/charter">The Charter</Link>
+              <Link href="/community">Our Community</Link>
+              <Link href="/transparency">Transparency</Link>
+              <Link href="/initiatives">Initiatives</Link>
+              <Link href="/news">News</Link>
+            </nav>
+
+            <span className="copyright">
+              © 2026 GoldTrack Rewards. All rights reserved.
+            </span>
+          </footer>
         </div>
 
-        <div
-          style={{
-            margin: "0 28px 28px",
-            padding: "34px",
-            borderRadius: "22px",
-            background: "linear-gradient(135deg, #063b2d, #0b1f1a)",
-            color: "#f7efd8",
-            textAlign: "center",
-          }}
-        >
-          <h2 style={{ color: "#d6b370", fontSize: "34px" }}>
-            The mission is the mission.
-          </h2>
-          <p style={{ maxWidth: "760px", margin: "0 auto", lineHeight: 1.7 }}>
-            Some people build. Some teach. Some preserve knowledge. Some bring
-            ideas. Some simply show up and encourage others. Every contribution
-            matters.
-          </p>
+        <style>{`
+          * {
+            box-sizing: border-box;
+          }
 
-          <div style={{ marginTop: "30px" }}>
-            <a
-              href="/community"
-              style={{
-                display: "inline-block",
-                padding: "15px 30px",
-                borderRadius: "999px",
-                background: "linear-gradient(135deg, #f3cf73, #a87420)",
-                color: "#1d1205",
-                textDecoration: "none",
-                fontWeight: "bold",
-                marginRight: "14px",
-              }}
-            >
-              Join Our Community
-            </a>
+          .page {
+            margin: 0;
+            min-height: 100vh;
+            padding: 18px 0 30px;
+            background: #111;
+          }
 
-            <a
-              href="/"
-              style={{
-                display: "inline-block",
-                padding: "15px 30px",
-                borderRadius: "999px",
-                border: "1px solid rgba(214,183,112,.7)",
-                color: "#f7efd8",
-                textDecoration: "none",
-                fontWeight: "bold",
-              }}
-            >
-              Return Home
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-  );
+          .canvas {
+            position: relative;
+            width: min(97vw, 1536px);
+            aspect-ratio: 3 / 2;
+            margin: 0 auto;
+            overflow: hidden;
+            container-type: inline-size;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #123b31;
+          }
+
+          .background {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            z-index: 0;
+            pointer-events: none;
+          }
+
+          .canvas a {
+            text-decoration: none;
+          }
+
+          /* HEADER */
+
+          .header {
+            position: absolute;
+            z-index: 5;
+            left: 4%;
+            top: 2.1%;
+            width: 92%;
+            height: 8%;
+          }
+
+          .gtrLogo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 7cqw;
+            height: 7cqw;
+            border-radius: 50%;
+            border: .3cqw solid #b67b16;
+            background: #06483a;
+            box-shadow: 0 .2cqw .5cqw rgba(0,0,0,.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #dfac35;
+            font-size: 2cqw;
+            font-weight: 800;
+          }
+
+          .topNav {
+            position: absolute;
+            left: 19%;
+            top: 25%;
+            width: 55%;
+            display: flex;
+            justify-content: space-between;
+          }
+
+          .topNav a {
+            font-family: Arial, sans-serif;
+            color: #183a31;
+            font-size: .92cqw;
+            font-weight: 700;
+            white-space: nowrap;
+          }
+
+          .joinTop {
+            position: absolute;
+            right: 0;
+            top: 5%;
+            background: #06483a;
+            border: .16cqw solid #b77a18;
+            border-radius: .45cqw;
+            color: #f5df9b;
+            padding: .8cqw 1.6cqw;
+            font-size: .95cqw;
+            font-weight: 800;
+          }
+
+          /* HERO */
+
+          .hero {
+            position: absolute;
+            z-index: 4;
+            left: 13.4%;
+            top: 11.5%;
+            width: 31%;
+          }
+
+          .hero h1 {
+            margin: 0;
+            color: #123e33;
+            font-size: 3.2cqw;
+            line-height: .98;
+          }
+
+          .hero h2 {
+            margin: .15cqw 0 1cqw;
+            color: #a46a18;
+            font-size: 2.35cqw;
+            line-height: 1;
+          }
+
+          .hero p {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #172d27;
+            font-size: 1.05cqw;
+            line-height: 1.42;
+            font-weight: 600;
+          }
+
+          /* GENERAL */
+
+          .aboutYou h3,
+          .participate h3,
+          .why h3,
+          .commitment h3 {
+            margin: 0 0 .55cqw;
+            color: #123c32;
+            font-size: 1.26cqw;
+            line-height: 1.1;
+          }
+
+          /* ABOUT YOU */
+
+          .aboutYou {
+            position: absolute;
+            z-index: 5;
+            left: 7%;
+            top: 34%;
+            width: 39%;
+          }
+
+          .twoInputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .8cqw;
+          }
+
+          .aboutYou input,
+          .why textarea {
+            width: 100%;
+            border: .08cqw solid #a9a296;
+            border-radius: .35cqw;
+            background: rgba(255,255,255,.82);
+            color: #273831;
+            font-family: Arial, sans-serif;
+            font-size: .93cqw;
+            outline: none;
+          }
+
+          .aboutYou input {
+            height: 2.55cqw;
+            padding: .55cqw .75cqw;
+          }
+
+          .country {
+            margin-top: .65cqw;
+          }
+
+          /* PARTICIPATION */
+
+          .participate {
+            position: absolute;
+            z-index: 5;
+            left: 5.3%;
+            top: 46%;
+            width: 42.5%;
+          }
+
+          .choiceGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .45cqw .55cqw;
+          }
+
+          .choice {
+            min-height: 4.2cqw;
+            display: grid;
+            grid-template-columns: 1.1cqw 2.3cqw 1fr;
+            align-items: center;
+            gap: .45cqw;
+            padding: .48cqw .6cqw;
+            background: rgba(247,242,227,.9);
+            border: .08cqw solid #bcb3a3;
+            border-radius: .35cqw;
+            color: #153a30;
+          }
+
+          .choice > input {
+            width: 1cqw;
+            height: 1cqw;
+          }
+
+          .choiceIcon {
+            font-size: 1.8cqw;
+            text-align: center;
+            color: #123e33;
+          }
+
+          .choiceCopy strong {
+            display: block;
+            font-family: Arial, sans-serif;
+            font-size: .88cqw;
+            font-weight: 800;
+            margin-bottom: .18cqw;
+          }
+
+          .choiceCopy small {
+            display: block;
+            font-family: Arial, sans-serif;
+            font-size: .66cqw;
+            line-height: 1.27;
+            color: #24362f;
+          }
+
+          /* WHY */
+
+          .why {
+            position: absolute;
+            z-index: 5;
+            left: 48.5%;
+            top: 38%;
+            width: 30%;
+          }
+
+          .why p {
+            margin: 0 0 .6cqw;
+            font-family: Arial, sans-serif;
+            font-size: .86cqw;
+            line-height: 1.35;
+            color: #1f322b;
+            font-weight: 600;
+          }
+
+          .why textarea {
+            height: 7.3cqw;
+            padding: .7cqw;
+            resize: none;
+          }
+
+          .why small {
+            display: block;
+            margin-top: .3cqw;
+            font-family: Arial, sans-serif;
+            font-size: .65cqw;
+            color: #48534e;
+          }
+
+          /* COMMITMENT */
+
+          .commitment {
+            position: absolute;
+            z-index: 5;
+            left: 48.5%;
+            top: 59.5%;
+            width: 30%;
+          }
+
+          .commitment > p {
+            margin: -.1cqw 0 1cqw 2cqw;
+            font-family: Arial, sans-serif;
+            font-size: .78cqw;
+            color: #24372f;
+            font-weight: 600;
+          }
+
+          .values {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            gap: .6cqw;
+          }
+
+          .values b {
+            display: block;
+            color: #06483a;
+            font-size: 2cqw;
+            line-height: 1;
+            margin-bottom: .35cqw;
+          }
+
+          .values span {
+            font-family: Arial, sans-serif;
+            font-size: .71cqw;
+            line-height: 1.25;
+            color: #172f28;
+          }
+
+          .agreement {
+            display: flex;
+            align-items: center;
+            gap: .5cqw;
+            margin-top: 1.1cqw;
+            font-family: Arial, sans-serif;
+            color: #20352d;
+            font-size: .8cqw;
+            font-weight: 600;
+          }
+
+          .agreement input {
+            width: 1cqw;
+            height: 1cqw;
+          }
+
+          /* RIGHT PANEL */
+
+          .record {
+            position: absolute;
+            z-index: 5;
+            left: 79.2%;
+            top: 36%;
+            width: 17.5%;
+            height: 51%;
+            padding: 2.4cqw 1.4cqw;
+            border: .1cqw solid #b27a1b;
+            border-radius: 1cqw;
+            background: rgba(249,243,222,.94);
+            text-align: center;
+            box-shadow: 0 .25cqw .8cqw rgba(0,0,0,.18);
+          }
+
+          .recordSymbol {
+            width: 2.8cqw;
+            height: 2.8cqw;
+            margin: -1.1cqw auto .6cqw;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #06483a;
+            border: .16cqw solid #b77b19;
+            color: #e1ad38;
+            font-size: 1.3cqw;
+          }
+
+          .record h3 {
+            margin: 0 0 1cqw;
+            color: #123b31;
+            font-size: 1.5cqw;
+            line-height: 1.05;
+          }
+
+          .record p {
+            margin: 0 0 1.1cqw;
+            font-family: Arial, sans-serif;
+            font-size: .75cqw;
+            line-height: 1.42;
+            color: #24362f;
+            font-weight: 600;
+          }
+
+          .record strong {
+            color: #a76b19;
+            font-size: 1.05cqw;
+            line-height: 1.25;
+          }
+
+          /* LOWER */
+
+          .lowerLeft {
+            position: absolute;
+            z-index: 5;
+            left: 15%;
+            top: 80.7%;
+            width: 24%;
+            display: flex;
+            align-items: center;
+            gap: 1cqw;
+          }
+
+          .roundIcon {
+            flex: 0 0 auto;
+            width: 3.4cqw;
+            height: 3.4cqw;
+            border-radius: 50%;
+            border: .16cqw solid #b57917;
+            background: rgba(255,255,255,.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5cqw;
+          }
+
+          .lowerLeft strong {
+            font-size: .8cqw;
+            color: #17372f;
+          }
+
+          .lowerLeft p {
+            margin: .2cqw 0 0;
+            font-family: Arial, sans-serif;
+            font-size: .72cqw;
+            line-height: 1.3;
+            color: #24362f;
+          }
+
+          .beCounted {
+            position: absolute;
+            z-index: 6;
+            left: 39%;
+            top: 79.9%;
+            width: 18%;
+            text-align: center;
+          }
+
+          .beCounted button {
+            width: 100%;
+            height: 4.1cqw;
+            border: .16cqw solid #b17617;
+            border-radius: .45cqw;
+            background: #06483a;
+            color: #f8e3aa;
+            font-family: Georgia, serif;
+            font-size: 1.55cqw;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 .22cqw .55cqw rgba(0,0,0,.3);
+          }
+
+          .beCounted > strong {
+            display: block;
+            margin-top: .55cqw;
+            font-size: .78cqw;
+            color: #162f29;
+          }
+
+          .lowerRight {
+            position: absolute;
+            z-index: 5;
+            left: 58%;
+            top: 81%;
+            width: 17%;
+            text-align: center;
+          }
+
+          .lowerRight p {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: .72cqw;
+            font-weight: 600;
+            color: #23372f;
+          }
+
+          .lowerRight strong {
+            display: block;
+            margin-top: .3cqw;
+            color: #a66b19;
+            font-size: 1.1cqw;
+            line-height: 1.25;
+          }
+
+          /* FOOTER */
+
+          .footer {
+            position: absolute;
+            z-index: 5;
+            left: 4%;
+            bottom: 1.8%;
+            width: 92%;
+            height: 7%;
+            display: flex;
+            align-items: center;
+          }
+
+          .footerLogo {
+            width: 4.3cqw;
+            height: 4.3cqw;
+            border-radius: 50%;
+            border: .16cqw solid #b27819;
+            background: #06483a;
+            color: #e0ae3a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1cqw;
+            font-weight: 800;
+          }
+
+          .quote {
+            margin-left: 1.8cqw;
+            color: #e7ba4c;
+            font-size: .75cqw;
+            font-style: italic;
+            font-weight: 700;
+          }
+
+          .footer nav {
+            display: flex;
+            gap: 1.3cqw;
+            margin-left: auto;
+          }
+
+          .footer nav a {
+            color: #f6e9bf;
+            font-family: Arial, sans-serif;
+            font-size: .56cqw;
+            font-weight: 600;
+          }
+
+          .copyright {
+            margin-left: 2cqw;
+            font-family: Arial, sans-serif;
+            color: #f6e9bf;
+            font-size: .52cqw;
+          }
+
+          input:focus,
+          textarea:focus {
+            border-color: #b27819;
+            box-shadow: 0 0 0 .12cqw rgba(178,120,25,.22);
+          }
+
+          .beCounted button:hover,
+          .joinTop:hover {
+            filter: brightness(1.1);
+          }
+            /* =========================================================
+   JOIN PAGE — FINAL PAGE-SPECIFIC STYLING
+========================================================= */
+
+/* HERO */
+.hero {
+  top: 11.5%;
+  width: 34%;
 }
+
+.hero h1 {
+  color: #123e33;
+  font-size: 3cqw;
+  line-height: .98;
+  font-weight: 800;
+}
+
+.hero h2 {
+  color: #a46a18;
+  font-size: 2.3cqw;
+}
+
+.hero p {
+  color: #293b33;
+  font-size: 1.08cqw;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+/* SECTION HEADINGS */
+.aboutYou h3,
+.participate h3,
+.why h3,
+.commitment h3 {
+  color: #4b3518;
+  font-size: 1.35cqw;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+/* INPUTS */
+.aboutYou input,
+.why textarea {
+  background: #302e29;
+  color: #f3ead1;
+  border-color: #6d6455;
+  font-size: .95cqw;
+}
+
+.aboutYou input::placeholder,
+.why textarea::placeholder {
+  color: #d2cbbd;
+  opacity: 1;
+}
+
+/* PARTICIPATION CARDS */
+.choice {
+  background: rgba(43, 41, 35, .96);
+  border-color: #746b5b;
+  color: #f5ecd4;
+}
+
+.choiceCopy strong {
+  color: #efe4bd;
+  font-size: .94cqw;
+  font-weight: 800;
+}
+
+.choiceCopy small {
+  color: #f4f0df;
+  font-size: .68cqw;
+  line-height: 1.3;
+}
+
+.choiceIcon {
+  color: #d8ad42;
+}
+
+/* WHY */
+.why > p {
+  color: #35483f;
+  font-size: .92cqw;
+  font-weight: 700;
+}
+
+.why small {
+  color: #59675f;
+  font-size: .7cqw;
+}
+
+/* COMMITMENT */
+.commitment > p {
+  color: #35483f;
+  font-size: .86cqw;
+  font-weight: 700;
+}
+
+.values b {
+  color: #12604e;
+}
+
+.values span {
+  color: #30463d;
+  font-size: .76cqw;
+  font-weight: 700;
+}
+
+.agreement {
+  color: #30463d;
+  font-size: .85cqw;
+  font-weight: 800;
+}
+
+/* RIGHT RECORD PANEL */
+.record {
+  background: rgba(43, 40, 29, .96);
+}
+
+.record h3 {
+  color: #f0e5bd;
+}
+
+.record p {
+  color: #fff7df;
+}
+
+.record strong {
+  color: #dfa337;
+}
+
+/* LOWER PHOTO AREA */
+.lowerLeft strong,
+.lowerLeft p,
+.lowerRight p {
+  color: #fff5d8;
+  text-shadow: 0 1px 3px rgba(0,0,0,.8);
+}
+
+.lowerRight strong {
+  color: #e5a335;
+  text-shadow: 0 1px 3px rgba(0,0,0,.8);
+}
+  .sectionHeadingSvg {
+  display: block;
+  width: 100%;
+  height: 2.3cqw;
+  margin: 0 0 .45cqw;
+  overflow: visible;
+}
+  .whyCopySvg {
+  display: block;
+  width: 100%;
+  height: 3cqw;
+  margin: 0 0 .35cqw;
+  overflow: visible;
+}
+  .commitmentCopySvg {
+  display: block;
+  width: 100%;
+  height: 2.2cqw;
+  margin: 0 0 .55cqw 2cqw;
+  overflow: visible;
+}
+  .valueCopySvg {
+  display: block;
+  width: 100%;
+  height: 2.7cqw;
+  overflow: visible;
+}
+
+.agreementCopySvg {
+  display: block;
+  width: 100%;
+  height: 1.8cqw;
+  overflow: visible;
+}
+  .heroCopySvg {
+  display: block;
+  width: 100%;
+  height: 5.2cqw;
+  margin-top: .5cqw;
+  overflow: visible;
+}
+        `}</style>
+      </main>
+    );
+  }

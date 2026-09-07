@@ -1,4 +1,10 @@
 export default function AboutPage() {
+  const green = "#123b2f";
+  const dark = "#26352e";
+  const gold = "#9a6815";
+  const brown = "#6d4818";
+  const cream = "#f1cf73";
+
   const nav = [
     ["About", "/about"],
     ["How It Works", "/how-it-works"],
@@ -10,515 +16,883 @@ export default function AboutPage() {
     ["News", "/news"],
   ];
 
-  const buttonStyle = {
-    display: "inline-block",
-    padding: "12px 20px",
-    borderRadius: "8px",
-    textDecoration: "none",
-    fontWeight: "bold",
-    border: "1px solid #c99a32",
-  };
-
   return (
     <main
       style={{
-        minHeight: "100vh",
         margin: 0,
-        background: "#efe6d2",
-        color: "#123c2f",
-        fontFamily: "Georgia, serif",
+        minHeight: "100vh",
+        background: "#18140e",
       }}
     >
-      {/* TOP NAVIGATION */}
-      <header
-        style={{
-          background: "#071827",
-          color: "white",
-          padding: "18px 5%",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: "25px",
-          flexWrap: "wrap",
-        }}
-      >
-        <a
-          href="/"
-          style={{
-            color: "#d8aa3d",
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-            gap: "12px",
-          }}
-        >
-          <div
-            style={{
-              width: "56px",
-              height: "56px",
-              borderRadius: "50%",
-              border: "3px solid #d8aa3d",
-              background: "#073326",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "23px",
-              fontWeight: "bold",
-            }}
-          >
-            GTR
-          </div>
-
-          <div>
-            <div
-              style={{
-                fontSize: "23px",
-                fontWeight: "bold",
-              }}
-            >
-              GoldTrack Rewards
-            </div>
-
-            <div
-              style={{
-                color: "#f5ecd3",
-                fontSize: "10px",
-              }}
-            >
-              OUR COMMUNITY. OUR INITIATIVES. OUR LEGACY.
-            </div>
-          </div>
-        </a>
-
-        <nav
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "18px",
-            flexWrap: "wrap",
-          }}
-        >
-          {nav.map(([label, href]) => (
-            <a
-              key={label}
-              href={href}
-              style={{
-                color: label === "About" ? "#d8aa3d" : "white",
-                textDecoration: "none",
-                fontSize: "14px",
-              }}
-            >
-              {label}
-            </a>
-          ))}
-
-          <a
-            href="/join"
-            style={{
-              ...buttonStyle,
-              background: "linear-gradient(180deg,#efc65d,#b67a17)",
-              color: "#07150f",
-            }}
-          >
-            Join / Be Counted
-          </a>
-        </nav>
-      </header>
-
-      {/* BACKGROUND PAGE */}
-      <section
+      <div
         style={{
           position: "relative",
           width: "100%",
-          maxWidth: "1055px",
-          minHeight: "1491px",
+          maxWidth: "1024px",
+          aspectRatio: "1024 / 1536",
           margin: "0 auto",
-          backgroundImage: 'url("/about-background.png")',
-          backgroundSize: "100% 100%",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "top center",
         }}
       >
-        {/* HERO TEXT */}
-        <div
+        {/* EXACT BACKGROUND */}
+        <img
+          src="/about-background.png"
+          alt=""
+          draggable={false}
           style={{
             position: "absolute",
-            top: "7%",
-            left: "8%",
-            width: "50%",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            display: "block",
+          }}
+        />
+
+        {/* =====================================================
+            SVG OVERLAY
+            Same coordinate system as the 1024 × 1536 image.
+        ====================================================== */}
+
+        <svg
+          viewBox="0 0 1024 1536"
+          preserveAspectRatio="xMidYMid meet"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            overflow: "visible",
           }}
         >
-          <div
-            style={{
-              color: "#9a741e",
-              fontSize: "17px",
-              letterSpacing: "2px",
-            }}
+          {/* ===================================================
+              HEADER / LOGO
+          ==================================================== */}
+
+          <a href="/" style={{ cursor: "pointer" }}>
+            <circle
+              cx="70"
+              cy="58"
+              r="28"
+              fill="#073b2d"
+              stroke={gold}
+              strokeWidth="2"
+            />
+
+            <text
+              x="70"
+              y="64"
+              textAnchor="middle"
+              fontFamily="Georgia, serif"
+              fontSize="18"
+              fontWeight="700"
+              fill={cream}
+            >
+              GTR
+            </text>
+
+            <text
+              x="108"
+              y="51"
+              fontFamily="Georgia, serif"
+              fontSize="18"
+              fontWeight="700"
+              fill={gold}
+            >
+              GoldTrack Rewards
+            </text>
+
+            <text
+              x="109"
+              y="67"
+              fontFamily="Georgia, serif"
+              fontSize="7"
+              fontWeight="700"
+              fill={dark}
+            >
+              OUR COMMUNITY. OUR INITIATIVES. OUR LEGACY.
+            </text>
+          </a>
+
+          {/* NAVIGATION */}
+
+          {nav.map(([label, href], i) => (
+            <a key={label} href={href} style={{ cursor: "pointer" }}>
+              <text
+                x={365 + i * 58}
+                y="55"
+                textAnchor="middle"
+                fontFamily="Georgia, serif"
+                fontSize="9"
+                fontWeight="700"
+                fill={label === "About" ? gold : dark}
+              >
+                {label}
+              </text>
+            </a>
+          ))}
+
+          <a href="/join" style={{ cursor: "pointer" }}>
+            <rect
+              x="868"
+              y="34"
+              width="124"
+              height="39"
+              rx="7"
+              fill="#073f2e"
+              stroke={gold}
+              strokeWidth="2"
+            />
+
+            <text
+              x="930"
+              y="58"
+              textAnchor="middle"
+              fontFamily="Georgia, serif"
+              fontSize="10"
+              fontWeight="700"
+              fill={cream}
+            >
+              Join / Be Counted
+            </text>
+          </a>
+
+          {/* ===================================================
+              HERO
+          ==================================================== */}
+
+          <text
+            x="67"
+            y="111"
+            fontFamily="Georgia, serif"
+            fontSize="12"
+            fontWeight="700"
+            letterSpacing="4"
+            fill={brown}
           >
             ABOUT
-          </div>
+          </text>
 
-          <h1
-            style={{
-              margin: "6px 0 8px",
-              fontSize: "clamp(38px,5vw,64px)",
-              lineHeight: ".95",
-              color: "#123c2f",
-            }}
+          <text
+            x="67"
+            y="161"
+            fontFamily="Georgia, serif"
+            fontSize="48"
+            fontWeight="700"
+            fill={green}
           >
             GoldTrack
-            <br />
+          </text>
+
+          <text
+            x="67"
+            y="206"
+            fontFamily="Georgia, serif"
+            fontSize="48"
+            fontWeight="700"
+            fill={green}
+          >
             Rewards
-          </h1>
+          </text>
 
-          <p
-            style={{
-              color: "#9a741e",
-              fontSize: "18px",
-              fontWeight: "bold",
-              marginTop: "10px",
-            }}
+          <text
+            x="68"
+            y="231"
+            fontFamily="Georgia, serif"
+            fontSize="12"
+            fontWeight="700"
+            fill={brown}
           >
-            Our Story. Our Purpose. Our Promise.
-          </p>
+            OUR STORY. OUR PURPOSE. OUR PROMISE.
+          </text>
 
-          <p
-            style={{
-              fontSize: "16px",
-              lineHeight: 1.5,
-              maxWidth: "470px",
-            }}
+          <TextBlock
+            x={68}
+            y={257}
+            width={430}
+            lines={[
+              "GoldTrack Rewards is a community-driven ecosystem built around",
+              "people, participation, knowledge, stewardship, meaningful ideas,",
+              "and the belief that what we build today can serve those who follow.",
+            ]}
+            fontSize={11}
+            fill={dark}
+          />
+
+          {/* ===================================================
+              MISSION PLAQUE
+          ==================================================== */}
+
+          <text
+            x="890"
+            y="139"
+            textAnchor="middle"
+            fontFamily="Georgia, serif"
+            fontSize="13"
+            fontWeight="700"
+            fill={brown}
           >
-            GoldTrack Rewards is a community-driven ecosystem built to help
-            people participate, preserve knowledge, support meaningful
-            initiatives, and create something worthy of continuing.
-          </p>
-
-          <div
-            style={{
-              display: "flex",
-              gap: "20px",
-              marginTop: "22px",
-              flexWrap: "wrap",
-            }}
-          >
-            <div>
-              <strong>Join</strong>
-              <div style={{ fontSize: "13px" }}>Be part of something bigger.</div>
-            </div>
-
-            <div>
-              <strong>Be Counted</strong>
-              <div style={{ fontSize: "13px" }}>Your voice matters.</div>
-            </div>
-
-            <div>
-              <strong>Participate</strong>
-              <div style={{ fontSize: "13px" }}>Help move the mission forward.</div>
-            </div>
-          </div>
-        </div>
-
-        {/* STONE SIGN */}
-        <div
-          style={{
-            position: "absolute",
-            top: "8%",
-            right: "8%",
-            width: "22%",
-            textAlign: "center",
-            color: "#57401a",
-          }}
-        >
-          <div style={{ fontSize: "18px", lineHeight: 1.6 }}>
             OUR MISSION
-            <br />
-            IS THE MISSION.
-            <br />
-            <br />
-            THE TOKEN
-            <br />
-            IS THE TOOL.
-          </div>
-        </div>
+          </text>
 
-        {/* OUR STORY */}
-        <div
-          style={{
-            position: "absolute",
-            top: "30%",
-            left: "8%",
-            right: "8%",
-            textAlign: "center",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "34px",
-              marginBottom: "12px",
-              color: "#123c2f",
-            }}
+          <text
+            x="890"
+            y="158"
+            textAnchor="middle"
+            fontFamily="Georgia, serif"
+            fontSize="13"
+            fontWeight="700"
+            fill={brown}
+          >
+            IS THE MISSION.
+          </text>
+
+          <line
+            x1="858"
+            y1="184"
+            x2="922"
+            y2="184"
+            stroke={gold}
+            strokeWidth="1"
+          />
+
+          <text
+            x="890"
+            y="222"
+            textAnchor="middle"
+            fontFamily="Georgia, serif"
+            fontSize="13"
+            fontWeight="700"
+            fill={brown}
+          >
+            THE TOKEN
+          </text>
+
+          <text
+            x="890"
+            y="241"
+            textAnchor="middle"
+            fontFamily="Georgia, serif"
+            fontSize="13"
+            fontWeight="700"
+            fill={brown}
+          >
+            IS THE TOOL.
+          </text>
+
+          <text
+            x="635"
+            y="430"
+            fontFamily="Georgia, serif"
+            fontSize="15"
+            fontWeight="700"
+            fontStyle="italic"
+            fill={cream}
+            stroke="#422c13"
+            strokeWidth=".25"
+          >
+            “People. Purpose. A Brighter Tomorrow.”
+          </text>
+
+          {/* ===================================================
+              OUR STORY
+          ==================================================== */}
+
+          <text
+            x="512"
+            y="507"
+            textAnchor="middle"
+            fontFamily="Georgia, serif"
+            fontSize="28"
+            fontWeight="700"
+            fill={gold}
           >
             Our Story
-          </h2>
+          </text>
 
-          <p
-            style={{
-              maxWidth: "760px",
-              margin: "0 auto",
-              lineHeight: 1.55,
-              fontSize: "16px",
-            }}
+          <TextBlock
+            x={512}
+            y={531}
+            width={600}
+            anchor="middle"
+            lines={[
+              "We empower people to participate, share ideas, preserve knowledge, support initiatives,",
+              "and help build something meaningful for future generations.",
+            ]}
+            fontSize={10}
+            fill={dark}
+          />
+
+          {/* STORY COL 1 */}
+
+          <text
+            x="177"
+            y="583"
+            textAnchor="middle"
+            fontSize="22"
+            fill={gold}
           >
-            We empower people to participate, share ideas, preserve knowledge,
-            support initiatives, and help build something meaningful for future
-            generations.
-          </p>
-        </div>
+            ●●●
+          </text>
 
-        {/* FOUR PRINCIPLES */}
-        <div
-          style={{
-            position: "absolute",
-            top: "39%",
-            left: "7%",
-            right: "7%",
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "18px",
-            textAlign: "center",
-          }}
-        >
-          {[
-            ["Global Community", "People from many places, backgrounds, and experiences."],
-            ["Purpose Driven", "Meaningful ideas become useful action."],
-            ["Transparency", "We operate openly and preserve the record."],
-            ["Recognition", "Every meaningful contribution matters."],
-          ].map(([title, text]) => (
-            <div key={title}>
-              <h3 style={{ color: "#8d6a20", marginBottom: "8px" }}>
-                {title}
-              </h3>
+          <SectionTitle x={177} y={610} text="Global Community" />
 
-              <p
-                style={{
-                  fontSize: "13px",
-                  lineHeight: 1.4,
-                  margin: 0,
-                }}
-              >
-                {text}
-              </p>
-            </div>
-          ))}
-        </div>
+          <TextBlock
+            x={177}
+            y={629}
+            anchor="middle"
+            width={170}
+            lines={[
+              "People from many places,",
+              "backgrounds, and experiences.",
+            ]}
+            fontSize={10}
+            fill={dark}
+          />
 
-        {/* WHY GOLDTRACK EXISTS */}
-        <div
-          style={{
-            position: "absolute",
-            top: "50.5%",
-            left: "7%",
-            width: "33%",
-            color: "#f6edd6",
-          }}
-        >
-          <h2
-            style={{
-              color: "#d9ad42",
-              fontSize: "26px",
-              marginBottom: "12px",
-            }}
+          {/* STORY COL 2 */}
+
+          <text
+            x="400"
+            y="583"
+            textAnchor="middle"
+            fontSize="23"
+            fill={gold}
+          >
+            ◆
+          </text>
+
+          <SectionTitle x={400} y={610} text="Purpose Driven" />
+
+          <TextBlock
+            x={400}
+            y={629}
+            anchor="middle"
+            width={170}
+            lines={[
+              "Meaningful ideas become",
+              "useful action.",
+            ]}
+            fontSize={10}
+            fill={dark}
+          />
+
+          {/* STORY COL 3 */}
+
+          <text
+            x="625"
+            y="582"
+            textAnchor="middle"
+            fontSize="27"
+            fill={gold}
+          >
+            □
+          </text>
+
+          <SectionTitle x={625} y={610} text="Transparency" />
+
+          <TextBlock
+            x={625}
+            y={629}
+            anchor="middle"
+            width={170}
+            lines={[
+              "We operate openly and",
+              "preserve the record.",
+            ]}
+            fontSize={10}
+            fill={dark}
+          />
+
+          {/* STORY COL 4 */}
+
+          <text
+            x="847"
+            y="584"
+            textAnchor="middle"
+            fontSize="28"
+            fill={gold}
+          >
+            ★
+          </text>
+
+          <SectionTitle x={847} y={610} text="Recognition" />
+
+          <TextBlock
+            x={847}
+            y={629}
+            anchor="middle"
+            width={170}
+            lines={[
+              "Every meaningful",
+              "contribution matters.",
+            ]}
+            fontSize={10}
+            fill={dark}
+          />
+
+          {/* ===================================================
+              WHY GOLDTRACK EXISTS
+          ==================================================== */}
+
+          <text
+            x="67"
+            y="760"
+            fontFamily="Georgia, serif"
+            fontSize="24"
+            fontWeight="700"
+            fill={gold}
           >
             Why GoldTrack Rewards Exists
-          </h2>
+          </text>
 
-          <p style={{ fontSize: "14px", lineHeight: 1.5 }}>
-            GoldTrack Rewards was created to encourage participation, preserve
-            useful knowledge, recognize meaningful contributions, and support
-            practical ideas that strengthen communities.
-          </p>
+          <TextBlock
+            x={68}
+            y={792}
+            width={390}
+            lines={[
+              "GoldTrack Rewards was created to encourage participation,",
+              "preserve useful knowledge, recognize meaningful contributions,",
+              "and support practical ideas that strengthen communities.",
+            ]}
+            fontSize={10}
+            fill={dark}
+          />
 
-          <p style={{ fontSize: "14px", lineHeight: 1.5 }}>
-            The mission remains the mission. The token is one tool that may
-            support that mission.
-          </p>
-        </div>
+          <TextBlock
+            x={68}
+            y={853}
+            width={395}
+            lines={[
+              "The mission remains the mission. The token is one tool",
+              "that may support that mission.",
+            ]}
+            fontSize={10}
+            fontWeight={700}
+            fill={brown}
+          />
 
-        {/* SIX SMALL CARDS */}
-        <div
-          style={{
-            position: "absolute",
-            top: "50.5%",
-            left: "43%",
-            right: "7%",
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "12px",
-          }}
-        >
-          {[
-            ["Knowledge Access", "Helpful resources and learning."],
-            ["Shared Ideas", "Community ideas worth exploring."],
-            ["Future Transparency", "Open information and clear records."],
-            ["Recognize Meaning", "Contributions should matter."],
-            ["Preserve Knowledge", "Save what may help others."],
-            ["Build A Legacy", "Create something worth continuing."],
-          ].map(([title, text]) => (
-            <div
-              key={title}
-              style={{
-                textAlign: "center",
-                padding: "8px",
-                fontSize: "12px",
-              }}
-            >
-              <strong style={{ color: "#8d6a20" }}>{title}</strong>
-              <div style={{ marginTop: "4px" }}>{text}</div>
-            </div>
-          ))}
-        </div>
+          {/* SIX CELLS */}
 
-        {/* GUIDING PRINCIPLES */}
-        <div
-          style={{
-            position: "absolute",
-            top: "67%",
-            left: "7%",
-            right: "7%",
-            textAlign: "center",
-          }}
-        >
-          <h2
-            style={{
-              color: "#123c2f",
-              fontSize: "28px",
-              marginBottom: "20px",
-            }}
+          <MiniCell
+            x={584}
+            y={755}
+            icon="▣"
+            title="Knowledge Access"
+            lines={["Helpful resources", "and learning."]}
+          />
+
+          <MiniCell
+            x={739}
+            y={755}
+            icon="◉"
+            title="Shared Ideas"
+            lines={["Community ideas", "worth exploring."]}
+          />
+
+          <MiniCell
+            x={893}
+            y={755}
+            icon="▤"
+            title="Future Transparency"
+            lines={["Open information", "and clear records."]}
+          />
+
+          <MiniCell
+            x={584}
+            y={842}
+            icon="◆"
+            title="Recognize Meaning"
+            lines={["Contributions should", "matter."]}
+          />
+
+          <MiniCell
+            x={739}
+            y={842}
+            icon="❧"
+            title="Preserve Knowledge"
+            lines={["Save what may help", "others."]}
+          />
+
+          <MiniCell
+            x={893}
+            y={842}
+            icon="▲"
+            title="Build A Legacy"
+            lines={["Create something", "worth continuing."]}
+          />
+
+          {/* ===================================================
+              GUIDING PRINCIPLES
+          ==================================================== */}
+
+          <text
+            x="512"
+            y="994"
+            textAnchor="middle"
+            fontFamily="Georgia, serif"
+            fontSize="28"
+            fontWeight="700"
+            fill={gold}
           >
             Our Guiding Principles
-          </h2>
+          </text>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(5, 1fr)",
-              gap: "16px",
-            }}
-          >
-            {[
-              ["Service", "We serve people and future generations."],
-              ["Integrity", "We act with honesty and transparency."],
-              ["Stewardship", "We protect what matters."],
-              ["Community", "Participation is our strength."],
-              ["Legacy", "We build beyond today."],
-            ].map(([title, text]) => (
-              <div key={title}>
-                <strong style={{ color: "#8d6a20" }}>{title}</strong>
-                <p
-                  style={{
-                    fontSize: "12px",
-                    lineHeight: 1.4,
-                  }}
-                >
-                  {text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+          {/* LEFT */}
 
-        {/* COMMUNITY BEFORE CURRENCY */}
-        <div
-          style={{
-            position: "absolute",
-            top: "68%",
-            right: "8%",
-            width: "25%",
-            textAlign: "center",
-          }}
-        >
-          <strong style={{ color: "#8d6a20" }}>
-            Community Before Currency
-          </strong>
+          <Principle
+            icon="♥"
+            x={145}
+            y={1049}
+            title="Service"
+            lines={[
+              "We serve people and",
+              "future generations.",
+            ]}
+          />
 
-          <p style={{ fontSize: "13px", lineHeight: 1.45 }}>
-            Our mission is not driven by money alone. Our community remains the
-            heart of everything we build.
-          </p>
-        </div>
+          <Principle
+            icon="⚖"
+            x={145}
+            y={1132}
+            title="Integrity"
+            lines={[
+              "We act with honesty,",
+              "fairness, and transparency.",
+            ]}
+          />
 
-        {/* FOUNDER AREA */}
-        <div
-          style={{
-            position: "absolute",
-            top: "80%",
-            left: "8%",
-            width: "48%",
-            color: "#f5ecd3",
-          }}
-        >
-          <h2
-            style={{
-              color: "#d9ad42",
-              fontSize: "25px",
-              marginBottom: "10px",
-            }}
+          {/* CENTER */}
+
+          <Principle
+            icon="♣"
+            x={460}
+            y={1049}
+            title="Stewardship"
+            lines={[
+              "We protect what matters and",
+              "preserve what may help those",
+              "who follow.",
+            ]}
+          />
+
+          <Principle
+            icon="●●●"
+            x={460}
+            y={1132}
+            title="Community"
+            lines={[
+              "Participation is our strength.",
+              "Every contribution has value.",
+            ]}
+          />
+
+          {/* RIGHT */}
+
+          <Principle
+            icon="✥"
+            x={768}
+            y={1049}
+            title="Legacy"
+            lines={[
+              "We build beyond today and",
+              "preserve useful knowledge",
+              "for tomorrow.",
+            ]}
+          />
+
+          <Principle
+            icon="◆"
+            x={730}
+            y={1132}
+            title="Community Before Currency"
+            lines={[
+              "Our mission is not driven by money alone.",
+              "Community remains at the heart",
+              "of everything we build.",
+            ]}
+          />
+
+          {/* ===================================================
+              FOUNDER
+          ==================================================== */}
+
+          <text
+            x="155"
+            y="1286"
+            fontFamily="Georgia, serif"
+            fontSize="26"
+            fontWeight="700"
+            fill={gold}
           >
             Meet The Founder
-          </h2>
+          </text>
 
-          <p style={{ fontSize: "14px", lineHeight: 1.5 }}>
-            GoldTrack Rewards began as an idea that people, knowledge,
-            participation, stewardship, and future opportunities could be
-            connected in one lasting ecosystem.
-          </p>
+          <TextBlock
+            x={105}
+            y={1318}
+            width={390}
+            lines={[
+              "GoldTrack Rewards began with the belief that people, knowledge,",
+              "participation, stewardship, and future opportunities could be",
+              "connected in one lasting ecosystem.",
+            ]}
+            fontSize={10}
+            fill={dark}
+          />
 
-          <p
-            style={{
-              color: "#d9ad42",
-              fontStyle: "italic",
-            }}
+          <text
+            x="15 I'm a little layer background text color boxes functioning buttons do it now in three step recess of one image so I can see it5"
+            y="1389"
+            fontFamily="Georgia, serif"
+            fontSize="15"
+            fontWeight="700"
+            fontStyle="italic"
+            fill={gold}
           >
             “Thank you for being here.”
-          </p>
-        </div>
+          </text>
 
-        {/* BOTTOM JOIN */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "3.5%",
-            left: "50%",
-            transform: "translateX(-50%)",
-            textAlign: "center",
-            width: "80%",
-          }}
-        >
-          <div
-            style={{
-              fontSize: "21px",
-              color: "#8d6a20",
-              marginBottom: "14px",
-            }}
+          {/* ===================================================
+              JOIN PANEL
+          ==================================================== */}
+
+          <text
+            x="767"
+            y="1288"
+            textAnchor="middle"
+            fontFamily="Georgia, serif"
+            fontSize="21"
+            fontWeight="700"
+            fill={gold}
           >
             Join · Be Counted · Participate
-          </div>
+          </text>
 
-          <a
-            href="/join"
-            style={{
-              ...buttonStyle,
-              background: "#07452f",
-              color: "white",
-              padding: "14px 30px",
-              fontSize: "16px",
-            }}
-          >
-            Join Our Community
+          <TextBlock
+            x={767}
+            y={1323}
+            anchor="middle"
+            width={390}
+            lines={[
+              "Every participant brings something different.",
+              "Your place in the mission begins simply by choosing to take part.",
+            ]}
+            fontSize={10}
+            fill={dark}
+          />
+
+          <a href="/join" style={{ cursor: "pointer" }}>
+            <rect
+              x="656"
+              y="1362"
+              width="222"
+              height="49"
+              rx="8"
+              fill="#073f2e"
+              stroke={gold}
+              strokeWidth="2"
+            />
+
+            <text
+              x="767"
+              y="1393"
+              textAnchor="middle"
+              fontFamily="Georgia, serif"
+              fontSize="13"
+              fontWeight="700"
+              fill={cream}
+            >
+              Join Our Community →
+            </text>
           </a>
-        </div>
-      </section>
+
+          {/* RETURN HOME */}
+
+          <a href="/" style={{ cursor: "pointer" }}>
+            <text
+              x="512"
+              y="1472"
+              textAnchor="middle"
+              fontFamily="Georgia, serif"
+              fontSize="9"
+              fontWeight="600"
+              fill={brown}
+            >
+              Return to GoldTrack Rewards
+            </text>
+          </a>
+        </svg>
+      </div>
     </main>
   );
 }
+
+/* =========================================================
+   SVG HELPERS
+========================================================= */
+
+function TextBlock({
+  x,
+  y,
+  lines,
+  fontSize = 10,
+  fill = "#26352e",
+  fontWeight = 500,
+  anchor = "start",
+}: {
+  x: number;
+  y: number;
+  width?: number;
+  lines: string[];
+  fontSize?: number;
+  fill?: string;
+  fontWeight?: number;
+  anchor?: "start" | "middle" | "end";
+}) {
+  return (
+    <text
+      x={x}
+      y={y}
+      textAnchor={anchor}
+      fontFamily="Georgia, 'Times New Roman', serif"
+      fontSize={fontSize}
+      fontWeight={fontWeight}
+      fill={fill}
+    >
+      {lines.map((line, i) => (
+        <tspan
+          key={i}
+          x={x}
+          dy={i === 0 ? 0 : fontSize * 1.35}
+        >
+          {line}
+        </tspan>
+      ))}
+    </text>
+  );
+}
+
+function SectionTitle({
+  x,
+  y,
+  text,
+}: {
+  x: number;
+  y: number;
+  text: string;
+}) {
+  return (
+    <text
+      x={x}
+      y={y}
+      textAnchor="middle"
+      fontFamily="Georgia, 'Times New Roman', serif"
+      fontSize="13"
+      fontWeight="700"
+      fill="#8c5d16"
+    >
+      {text}
+    </text>
+  );
+}
+
+function MiniCell({
+  x,
+  y,
+  icon,
+  title,
+  lines,
+}: {
+  x: number;
+  y: number;
+  icon: string;
+  title: string;
+  lines: string[];
+}) {
+  return (
+    <g>
+      <text
+        x={x}
+        y={y}
+        textAnchor="middle"
+        fontFamily="Georgia, serif"
+        fontSize="20"
+        fontWeight="700"
+        fill="#9a6815"
+      >
+        {icon}
+      </text>
+
+      <text
+        x={x}
+        y={y + 26}
+        textAnchor="middle"
+        fontFamily="Georgia, serif"
+        fontSize="10"
+        fontWeight="700"
+        fill="#875a15"
+      >
+        {title}
+      </text>
+
+      <TextBlock
+        x={x}
+        y={y + 43}
+        anchor="middle"
+        lines={lines}
+        fontSize={8}
+        fontWeight={500}
+        fill="#26352e"
+      />
+    </g>
+  );
+}
+
+function Principle({
+  x,
+  y,
+  icon,
+  title,
+  lines,
+}: {
+  x: number;
+  y: number;
+  icon: string;
+  title: string;
+  lines: string[];
+}) {
+  return (
+    <g>
+      <text
+        x={x}
+        y={y}
+        textAnchor="middle"
+        fontFamily="Georgia, serif"
+        fontSize="23"
+        fontWeight="700"
+        fill="#9a6815"
+      >
+        {icon}
+      </text>
+
+      <text
+        x={x + 38}
+        y={y - 3}
+        fontFamily="Georgia, serif"
+        fontSize="13"
+        fontWeight="700"
+        fill="#875a15"
+      >
+        {title}
+      </text>
+
+      <TextBlock
+        x={x + 38}
+        y={y + 17}
+        lines={lines}
+        fontSize={9}
+        fontWeight={500}
+        fill="#26352e" 
+      />
+    </g>
+  );
+} 

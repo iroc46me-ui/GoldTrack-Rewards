@@ -2,6 +2,46 @@
   box-sizing: border-box;
 }
 
+html {
+  margin: 0;
+  padding: 0;
+  background: #211a11;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  background: #211a11;
+  color: #26352f;
+  font-family: Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
+
+p,
+span,
+div,
+section,
+article,
+main,
+header,
+footer,
+nav {
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
