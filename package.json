@@ -12,7 +12,8 @@
     "dotenv": "^17.4.2",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "temporal-polyfill": "^1.0.4"
   },
   "devDependencies": {
     "@prisma/cli-engine": "^0.2.3",
