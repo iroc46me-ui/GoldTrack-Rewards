@@ -33,7 +33,7 @@ import type {
 } from '@prisma/orm-postgres/contract/types';
 
 export type StorageHash =
-  StorageHashBase<'3d22cfc8d766085fe4e430290a1f494875a851e546b45cba4b9a579df4fdce18'>;
+  StorageHashBase<'a2a4f58c85205ab02018b6c6862946fe28acfce0f1794b3276e7d91f7cb55746'>;
 export type ExecutionHash =
   ExecutionHashBase<'df4edf4692397dc77ad6df482c66e055c4d49325402067ee6ad94ca7ebd01c34'>;
 export type ProfileHash =
@@ -252,21 +252,6 @@ export type FieldOutputTypes = {
       readonly submitterName: CodecTypes['pg/text@1']['output'];
       readonly submitterEmail: CodecTypes['pg/text@1']['output'];
       readonly memberId: CodecTypes['pg/text@1']['output'] | null;
-      readonly community: CodecTypes['pg/text@1']['output'] | null;
-      readonly beneficiaries: CodecTypes['pg/text@1']['output'] | null;
-      readonly problem: CodecTypes['pg/text@1']['output'] | null;
-      readonly outcome: CodecTypes['pg/text@1']['output'] | null;
-      readonly phone: CodecTypes['pg/text@1']['output'] | null;
-      readonly submitterType: CodecTypes['pg/text@1']['output'] | null;
-      readonly organization: CodecTypes['pg/text@1']['output'] | null;
-      readonly communitySupport: CodecTypes['pg/text@1']['output'] | null;
-      readonly supportExplanation: CodecTypes['pg/text@1']['output'] | null;
-      readonly financialInterest: CodecTypes['pg/text@1']['output'] | null;
-      readonly interestExplanation: CodecTypes['pg/text@1']['output'] | null;
-      readonly assets: CodecTypes['pg/text@1']['output'] | null;
-      readonly assetExplanation: CodecTypes['pg/text@1']['output'] | null;
-      readonly helpNeeded: ReadonlyArray<CodecTypes['pg/text@1']['output']>;
-      readonly additionalInformation: CodecTypes['pg/text@1']['output'] | null;
       readonly status: CodecTypes['pg/text@1']['output'];
       readonly createdAt: CodecTypes['pg/timestamptz-temporal@1']['output'];
       readonly updatedAt: CodecTypes['pg/timestamptz-temporal@1']['output'];
@@ -299,21 +284,6 @@ export type FieldInputTypes = {
       readonly submitterName: CodecTypes['pg/text@1']['input'];
       readonly submitterEmail: CodecTypes['pg/text@1']['input'];
       readonly memberId: CodecTypes['pg/text@1']['input'] | null;
-      readonly community: CodecTypes['pg/text@1']['input'] | null;
-      readonly beneficiaries: CodecTypes['pg/text@1']['input'] | null;
-      readonly problem: CodecTypes['pg/text@1']['input'] | null;
-      readonly outcome: CodecTypes['pg/text@1']['input'] | null;
-      readonly phone: CodecTypes['pg/text@1']['input'] | null;
-      readonly submitterType: CodecTypes['pg/text@1']['input'] | null;
-      readonly organization: CodecTypes['pg/text@1']['input'] | null;
-      readonly communitySupport: CodecTypes['pg/text@1']['input'] | null;
-      readonly supportExplanation: CodecTypes['pg/text@1']['input'] | null;
-      readonly financialInterest: CodecTypes['pg/text@1']['input'] | null;
-      readonly interestExplanation: CodecTypes['pg/text@1']['input'] | null;
-      readonly assets: CodecTypes['pg/text@1']['input'] | null;
-      readonly assetExplanation: CodecTypes['pg/text@1']['input'] | null;
-      readonly helpNeeded: ReadonlyArray<CodecTypes['pg/text@1']['input']>;
-      readonly additionalInformation: CodecTypes['pg/text@1']['input'] | null;
       readonly status: CodecTypes['pg/text@1']['input'];
       readonly createdAt: CodecTypes['pg/timestamptz-temporal@1']['input'];
       readonly updatedAt: CodecTypes['pg/timestamptz-temporal@1']['input'];
@@ -336,32 +306,17 @@ export type FieldInputTypes = {
 export type StorageColumnTypes = {
   readonly public: {
     readonly communityIdea: {
-      readonly additionalInformation: CodecTypes['pg/text@1']['output'] | null;
-      readonly assetExplanation: CodecTypes['pg/text@1']['output'] | null;
-      readonly assets: CodecTypes['pg/text@1']['output'] | null;
-      readonly beneficiaries: CodecTypes['pg/text@1']['output'] | null;
       readonly category: CodecTypes['pg/text@1']['output'] | null;
-      readonly community: CodecTypes['pg/text@1']['output'] | null;
       readonly communityBenefit: CodecTypes['pg/text@1']['output'];
-      readonly communitySupport: CodecTypes['pg/text@1']['output'] | null;
       readonly createdAt: CodecTypes['pg/timestamptz-temporal@1']['output'];
       readonly description: CodecTypes['pg/text@1']['output'];
-      readonly financialInterest: CodecTypes['pg/text@1']['output'] | null;
-      readonly helpNeeded: ReadonlyArray<CodecTypes['pg/text@1']['output']>;
       readonly id: CodecTypes['pg/text@1']['output'];
-      readonly interestExplanation: CodecTypes['pg/text@1']['output'] | null;
       readonly location: CodecTypes['pg/text@1']['output'] | null;
       readonly memberId: CodecTypes['pg/text@1']['output'] | null;
-      readonly organization: CodecTypes['pg/text@1']['output'] | null;
-      readonly outcome: CodecTypes['pg/text@1']['output'] | null;
-      readonly phone: CodecTypes['pg/text@1']['output'] | null;
-      readonly problem: CodecTypes['pg/text@1']['output'] | null;
       readonly status: CodecTypes['pg/text@1']['output'];
       readonly submitterEmail: CodecTypes['pg/text@1']['output'];
       readonly submitterName: CodecTypes['pg/text@1']['output'];
-      readonly submitterType: CodecTypes['pg/text@1']['output'] | null;
       readonly summary: CodecTypes['pg/text@1']['output'];
-      readonly supportExplanation: CodecTypes['pg/text@1']['output'] | null;
       readonly title: CodecTypes['pg/text@1']['output'];
       readonly updatedAt: CodecTypes['pg/timestamptz-temporal@1']['output'];
     };
@@ -383,32 +338,17 @@ export type StorageColumnTypes = {
 export type StorageColumnInputTypes = {
   readonly public: {
     readonly communityIdea: {
-      readonly additionalInformation: CodecTypes['pg/text@1']['input'] | null;
-      readonly assetExplanation: CodecTypes['pg/text@1']['input'] | null;
-      readonly assets: CodecTypes['pg/text@1']['input'] | null;
-      readonly beneficiaries: CodecTypes['pg/text@1']['input'] | null;
       readonly category: CodecTypes['pg/text@1']['input'] | null;
-      readonly community: CodecTypes['pg/text@1']['input'] | null;
       readonly communityBenefit: CodecTypes['pg/text@1']['input'];
-      readonly communitySupport: CodecTypes['pg/text@1']['input'] | null;
       readonly createdAt: CodecTypes['pg/timestamptz-temporal@1']['input'];
       readonly description: CodecTypes['pg/text@1']['input'];
-      readonly financialInterest: CodecTypes['pg/text@1']['input'] | null;
-      readonly helpNeeded: ReadonlyArray<CodecTypes['pg/text@1']['input']>;
       readonly id: CodecTypes['pg/text@1']['input'];
-      readonly interestExplanation: CodecTypes['pg/text@1']['input'] | null;
       readonly location: CodecTypes['pg/text@1']['input'] | null;
       readonly memberId: CodecTypes['pg/text@1']['input'] | null;
-      readonly organization: CodecTypes['pg/text@1']['input'] | null;
-      readonly outcome: CodecTypes['pg/text@1']['input'] | null;
-      readonly phone: CodecTypes['pg/text@1']['input'] | null;
-      readonly problem: CodecTypes['pg/text@1']['input'] | null;
       readonly status: CodecTypes['pg/text@1']['input'];
       readonly submitterEmail: CodecTypes['pg/text@1']['input'];
       readonly submitterName: CodecTypes['pg/text@1']['input'];
-      readonly submitterType: CodecTypes['pg/text@1']['input'] | null;
       readonly summary: CodecTypes['pg/text@1']['input'];
-      readonly supportExplanation: CodecTypes['pg/text@1']['input'] | null;
       readonly title: CodecTypes['pg/text@1']['input'];
       readonly updatedAt: CodecTypes['pg/timestamptz-temporal@1']['input'];
     };
@@ -493,85 +433,6 @@ type ContractBase = Omit<
                   readonly nullable: false;
                 };
                 readonly memberId: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly community: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly beneficiaries: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly problem: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly outcome: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly phone: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly submitterType: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly organization: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly communitySupport: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly supportExplanation: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly financialInterest: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly interestExplanation: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly assets: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly assetExplanation: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: true;
-                };
-                readonly helpNeeded: {
-                  readonly nativeType: 'text';
-                  readonly codecId: 'pg/text@1';
-                  readonly nullable: false;
-                  readonly default: {
-                    readonly kind: 'literal';
-                    readonly value: DefaultLiteralValue<'pg/text@1', readonly []>;
-                  };
-                };
-                readonly additionalInformation: {
                   readonly nativeType: 'text';
                   readonly codecId: 'pg/text@1';
                   readonly nullable: true;
@@ -743,67 +604,6 @@ type ContractBase = Omit<
                 readonly nullable: true;
                 readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
               };
-              readonly community: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
-              readonly beneficiaries: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
-              readonly problem: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
-              readonly outcome: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
-              readonly phone: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
-              readonly submitterType: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
-              readonly organization: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
-              readonly communitySupport: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
-              readonly supportExplanation: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
-              readonly financialInterest: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
-              readonly interestExplanation: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
-              readonly assets: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
-              readonly assetExplanation: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
-              readonly helpNeeded: {
-                readonly nullable: false;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-                readonly many: true;
-              };
-              readonly additionalInformation: {
-                readonly nullable: true;
-                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
-              };
               readonly status: {
                 readonly nullable: false;
                 readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
@@ -838,21 +638,6 @@ type ContractBase = Omit<
                 readonly submitterName: { readonly column: 'submitterName' };
                 readonly submitterEmail: { readonly column: 'submitterEmail' };
                 readonly memberId: { readonly column: 'memberId' };
-                readonly community: { readonly column: 'community' };
-                readonly beneficiaries: { readonly column: 'beneficiaries' };
-                readonly problem: { readonly column: 'problem' };
-                readonly outcome: { readonly column: 'outcome' };
-                readonly phone: { readonly column: 'phone' };
-                readonly submitterType: { readonly column: 'submitterType' };
-                readonly organization: { readonly column: 'organization' };
-                readonly communitySupport: { readonly column: 'communitySupport' };
-                readonly supportExplanation: { readonly column: 'supportExplanation' };
-                readonly financialInterest: { readonly column: 'financialInterest' };
-                readonly interestExplanation: { readonly column: 'interestExplanation' };
-                readonly assets: { readonly column: 'assets' };
-                readonly assetExplanation: { readonly column: 'assetExplanation' };
-                readonly helpNeeded: { readonly column: 'helpNeeded' };
-                readonly additionalInformation: { readonly column: 'additionalInformation' };
                 readonly status: { readonly column: 'status' };
                 readonly createdAt: { readonly column: 'createdAt' };
                 readonly updatedAt: { readonly column: 'updatedAt' };

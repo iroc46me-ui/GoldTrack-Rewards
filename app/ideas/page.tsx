@@ -6,15 +6,81 @@ import { FormEvent, useState } from "react";
 export default function IdeasPage() {
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  e.preventDefault();
 
-    // Visual/form stage only.
-    // We will connect this to the GoldTrack database/API
-    // after the page itself is approved.
-    setSubmitted(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+
+  const response = await fetch("/api/community-ideas", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+  title: String(formData.get("problem") || "").trim(),
+  summary: String(formData.get("idea") || "").trim(),
+  description: String(formData.get("idea") || "").trim(),
+
+  communityBenefit: String(
+    formData.get("communityBenefit") || ""
+  ).trim(),
+
+  location: String(formData.get("location") || "").trim(),
+  category: String(formData.get("submitterType") || "").trim(),
+
+  submitterName: String(formData.get("name") || "").trim(),
+  submitterEmail: String(formData.get("email") || "").trim(),
+
+  community: String(formData.get("community") || "").trim(),
+  beneficiaries: String(formData.get("beneficiaries") || "").trim(),
+  problem: String(formData.get("problem") || "").trim(),
+  outcome: String(formData.get("outcome") || "").trim(),
+
+  phone: String(formData.get("phone") || "").trim(),
+  submitterType: String(formData.get("submitterType") || "").trim(),
+  organization: String(formData.get("organization") || "").trim(),
+
+  communitySupport: String(
+    formData.get("communitySupport") || ""
+  ).trim(),
+
+  supportExplanation: String(
+    formData.get("supportExplanation") || ""
+  ).trim(),
+
+  financialInterest: String(
+    formData.get("financialInterest") || ""
+  ).trim(),
+
+  interestExplanation: String(
+    formData.get("interestExplanation") || ""
+  ).trim(),
+
+  assets: String(formData.get("assets") || "").trim(),
+
+  assetExplanation: String(
+    formData.get("assetExplanation") || ""
+  ).trim(),
+
+  helpNeeded: formData.getAll("helpNeeded").map(String),
+
+  additionalInformation: String(
+    formData.get("additionalInformation") || ""
+  ).trim(),
+}),
+  });
+
+  if (!response.ok) {
+    const result = await response.json();
+    alert(result.error || "We could not save your idea. Please try again.");
+    return;
   }
+
+  form.reset();
+  setSubmitted(true);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 
   if (submitted) {
     return (
@@ -27,13 +93,13 @@ export default function IdeasPage() {
           <h1 style={successTitle}>Your idea is ready for review.</h1>
 
           <p style={successText}>
-            This page is currently in its design and testing stage. No
-            information has been transmitted or stored yet.
-          </p>
+  Thank you. Your community idea has been received and securely
+  submitted for initial review.
+</p>
 
           <div style={successBox}>
             <strong style={{ color: "#e4bd59" }}>
-              When the submission system is activated:
+               What happens next:
             </strong>
 
             <p style={{ margin: "12px 0 0", lineHeight: 1.7 }}>
@@ -341,8 +407,9 @@ export default function IdeasPage() {
             </button>
 
             <p style={submitNote}>
-              During this design stage, clicking Submit does not transmit or
-              store your information.
+             Your submission will be securely recorded for initial GoldTrack
+  review. Submission does not constitute approval, funding, or a
+  commitment by GoldTrack Rewards.
             </p>
 
             <div style={closingLine}>

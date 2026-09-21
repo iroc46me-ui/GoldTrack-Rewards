@@ -11,3 +11,43 @@ model CommunityMember {
   createdAt          DateTime @default(now())
   updatedAt temporal.updatedAt()
 }
+model CommunityIdea {
+  id               String   @id @default(uuid())
+
+  title            String
+  summary          String
+  description      String
+
+  category         String?
+  communityBenefit String
+  location         String?
+
+  submitterName    String
+  submitterEmail   String
+  memberId         String?
+  community           String?
+beneficiaries       String?
+problem             String?
+outcome             String?
+
+phone               String?
+submitterType       String?
+organization        String?
+
+communitySupport    String?
+supportExplanation  String?
+
+financialInterest   String?
+interestExplanation String?
+
+assets               String?
+assetExplanation     String?
+
+helpNeeded           String[] @default([])
+additionalInformation String?
+
+  status           String   @default("SUBMITTED")
+
+  createdAt        DateTime @default(now())
+  updatedAt        temporal.updatedAt()
+}
