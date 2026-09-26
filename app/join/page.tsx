@@ -123,10 +123,8 @@ import { useState } from "react";
 
           {/* HERO */}
           <section className="hero">
-            <h1>Join Our Community</h1>
-            <h2>Be Counted</h2>
-
-            <svg
+             <h2>Be Counted</h2>
+<svg
   className="heroCopySvg"
   viewBox="0 0 560 88"
   preserveAspectRatio="xMinYMid meet"
@@ -152,7 +150,7 @@ import { useState } from "react";
     </tspan>
 
     <tspan x="0" dy="20">
-      Together, we can create lasting impac.
+      Together, we can create lasting impact.
     </tspan>
   </text>
 </svg>
@@ -784,15 +782,35 @@ import { useState } from "react";
             width: 55%;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            isolation: isolate;
           }
 
-          .topNav a {
-            font-family: Arial, sans-serif;
-            color: #183a31;
-            font-size: .92cqw;
-            font-weight: 700;
-            white-space: nowrap;
+          /* One shared backdrop: no change to navigation positions. */
+          .topNav::before {
+            content: "";
+            position: absolute;
+            inset: -.65cqw -.75cqw;
+            z-index: -1;
+            background: rgba(255, 247, 225, .94);
+            border: .09cqw solid rgba(119, 85, 34, .55);
+            border-radius: .45cqw;
+            box-shadow: 0 .12cqw .35cqw rgba(0, 0, 0, .16);
+            pointer-events: none;
           }
+
+          .topNav a,
+.topNav a:link,
+.topNav a:visited,
+.topNav a:hover,
+.topNav a:active {
+  font-family: Arial, sans-serif;
+  color: #173e32 !important;
+  -webkit-text-fill-color: #173e32 !important;
+  font-size: .92cqw;
+  font-weight: 800;
+  white-space: nowrap;
+}
 
           .joinTop {
             position: absolute;
@@ -806,6 +824,7 @@ import { useState } from "react";
             font-size: .95cqw;
             font-weight: 800;
           }
+            
 
           /* HERO */
 
@@ -819,7 +838,7 @@ import { useState } from "react";
 
           .hero h1 {
             margin: 0;
-            color: #123e33;
+            color: #123e33 !important;
             font-size: 3.2cqw;
             line-height: .98;
           }
@@ -1258,7 +1277,7 @@ import { useState } from "react";
 }
 
 .hero h1 {
-  color: #123e33;
+  color: #123e33;!important;
   font-size: 3cqw;
   line-height: .98;
   font-weight: 800;
